@@ -127,7 +127,7 @@ public class Ventana1Controller {
 		progress4.setProgress(p4.vida_actual/p4.vida);
 		progress5.setProgress(p5.vida_actual/p5.vida);
 		progress6.setProgress(p6.vida_actual/p6.vida);
-		System.out.println(p6.vida_actual/p6.vida);
+
 
 	}
 
@@ -138,6 +138,11 @@ public class Ventana1Controller {
 		l1Nombre1.setStyle("-fx-text-fill: #0BE1F0;");
 		l2Nivel1.setStyle("-fx-text-fill: #0BE1F0;");
 		l3Vida1.setStyle("-fx-text-fill: #0BE1F0;");
+		Anchor5.setStyle("-fx-background-color: #34B8D4;");
+		Anchor2.setStyle("-fx-background-color: #34B8D4;");
+		Anchor3.setStyle("-fx-background-color: #34B8D4;");
+		Anchor4.setStyle("-fx-background-color: #34B8D4;");
+		Anchor6.setStyle("-fx-background-color: #34B8D4;");
 		cont=1;
 	}
 	@FXML
@@ -147,6 +152,11 @@ public class Ventana1Controller {
 		l4Nombre2.setStyle("-fx-text-fill: #0BE1F0;");
 		l5Nivel2.setStyle("-fx-text-fill: #0BE1F0;");
 		l6Vida2.setStyle("-fx-text-fill: #0BE1F0;");
+		Anchor1.setStyle("-fx-background-color: #34B8D4;");
+		Anchor5.setStyle("-fx-background-color: #34B8D4;");
+		Anchor3.setStyle("-fx-background-color: #34B8D4;");
+		Anchor4.setStyle("-fx-background-color: #34B8D4;");
+		Anchor6.setStyle("-fx-background-color: #34B8D4;");
 		cont=1;
 	}
 	@FXML
@@ -156,6 +166,11 @@ public class Ventana1Controller {
 		l7Nombre3.setStyle("-fx-text-fill: #0BE1F0;");
 		l8Nivel3.setStyle("-fx-text-fill: #0BE1F0;");
 		l9Vida3.setStyle("-fx-text-fill: #0BE1F0;");
+		Anchor1.setStyle("-fx-background-color: #34B8D4;");
+		Anchor2.setStyle("-fx-background-color: #34B8D4;");
+		Anchor5.setStyle("-fx-background-color: #34B8D4;");
+		Anchor4.setStyle("-fx-background-color: #34B8D4;");
+		Anchor6.setStyle("-fx-background-color: #34B8D4;");
 		cont=1;
 	}
 	@FXML
@@ -165,6 +180,11 @@ public class Ventana1Controller {
 		l10Nombre4.setStyle("-fx-text-fill: #0BE1F0;");
 		l11Nivel4.setStyle("-fx-text-fill: #0BE1F0;");
 		l12Vida4.setStyle("-fx-text-fill: #0BE1F0;");
+		Anchor1.setStyle("-fx-background-color: #34B8D4;");
+		Anchor2.setStyle("-fx-background-color: #34B8D4;");
+		Anchor3.setStyle("-fx-background-color: #34B8D4;");
+		Anchor5.setStyle("-fx-background-color: #34B8D4;");
+		Anchor6.setStyle("-fx-background-color: #34B8D4;");
 		cont=1;
 	}
 	@FXML
@@ -174,6 +194,12 @@ public class Ventana1Controller {
 		l13Nombre5.setStyle("-fx-text-fill: #0BE1F0;");
 		l14Nivel5.setStyle("-fx-text-fill: #0BE1F0;");
 		l15Vida5.setStyle("-fx-text-fill: #0BE1F0;");
+		Anchor1.setStyle("-fx-background-color: #34B8D4;");
+		Anchor2.setStyle("-fx-background-color: #34B8D4;");
+		Anchor3.setStyle("-fx-background-color: #34B8D4;");
+		Anchor4.setStyle("-fx-background-color: #34B8D4;");
+		Anchor6.setStyle("-fx-background-color: #34B8D4;");
+
 		cont=1;
 	}
 	@FXML
@@ -183,6 +209,11 @@ public class Ventana1Controller {
 		l16Nombre6.setStyle("-fx-text-fill: #0BE1F0;");
 		l17Nivel6.setStyle("-fx-text-fill: #0BE1F0;");
 		l18Vida6.setStyle("-fx-text-fill: #0BE1F0;");
+		Anchor1.setStyle("-fx-background-color: #34B8D4;");
+		Anchor2.setStyle("-fx-background-color: #34B8D4;");
+		Anchor3.setStyle("-fx-background-color: #34B8D4;");
+		Anchor4.setStyle("-fx-background-color: #34B8D4;");
+		Anchor5.setStyle("-fx-background-color: #34B8D4;");
 		cont=1;
 	}
 
