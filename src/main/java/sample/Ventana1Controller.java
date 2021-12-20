@@ -143,6 +143,12 @@ public class Ventana1Controller {
 		Anchor3.setStyle("-fx-background-color: #34B8D4;");
 		Anchor4.setStyle("-fx-background-color: #34B8D4;");
 		Anchor6.setStyle("-fx-background-color: #34B8D4;");
+		img1.setStyle("-fx-opacity:1");
+		img6.setStyle("-fx-opacity:0.5");
+		img2.setStyle("-fx-opacity:0.5");
+		img3.setStyle("-fx-opacity:0.5");
+		img4.setStyle("-fx-opacity:0.5");
+		img5.setStyle("-fx-opacity:0.5");
 		cont=1;
 	}
 	@FXML
@@ -157,6 +163,12 @@ public class Ventana1Controller {
 		Anchor3.setStyle("-fx-background-color: #34B8D4;");
 		Anchor4.setStyle("-fx-background-color: #34B8D4;");
 		Anchor6.setStyle("-fx-background-color: #34B8D4;");
+		img2.setStyle("-fx-opacity:1");
+		img1.setStyle("-fx-opacity:0.5");
+		img6.setStyle("-fx-opacity:0.5");
+		img3.setStyle("-fx-opacity:0.5");
+		img4.setStyle("-fx-opacity:0.5");
+		img5.setStyle("-fx-opacity:0.5");
 		cont=1;
 	}
 	@FXML
@@ -171,6 +183,12 @@ public class Ventana1Controller {
 		Anchor5.setStyle("-fx-background-color: #34B8D4;");
 		Anchor4.setStyle("-fx-background-color: #34B8D4;");
 		Anchor6.setStyle("-fx-background-color: #34B8D4;");
+		img3.setStyle("-fx-opacity:1");
+		img1.setStyle("-fx-opacity:0.5");
+		img2.setStyle("-fx-opacity:0.5");
+		img6.setStyle("-fx-opacity:0.5");
+		img4.setStyle("-fx-opacity:0.5");
+		img5.setStyle("-fx-opacity:0.5");
 		cont=1;
 	}
 	@FXML
@@ -185,6 +203,12 @@ public class Ventana1Controller {
 		Anchor3.setStyle("-fx-background-color: #34B8D4;");
 		Anchor5.setStyle("-fx-background-color: #34B8D4;");
 		Anchor6.setStyle("-fx-background-color: #34B8D4;");
+		img4.setStyle("-fx-opacity:1");
+		img1.setStyle("-fx-opacity:0.5");
+		img2.setStyle("-fx-opacity:0.5");
+		img3.setStyle("-fx-opacity:0.5");
+		img6.setStyle("-fx-opacity:0.5");
+		img5.setStyle("-fx-opacity:0.5");
 		cont=1;
 	}
 	@FXML
@@ -199,6 +223,12 @@ public class Ventana1Controller {
 		Anchor3.setStyle("-fx-background-color: #34B8D4;");
 		Anchor4.setStyle("-fx-background-color: #34B8D4;");
 		Anchor6.setStyle("-fx-background-color: #34B8D4;");
+		img5.setStyle("-fx-opacity:1");
+		img1.setStyle("-fx-opacity:0.5");
+		img2.setStyle("-fx-opacity:0.5");
+		img3.setStyle("-fx-opacity:0.5");
+		img4.setStyle("-fx-opacity:0.5");
+		img6.setStyle("-fx-opacity:0.5");
 
 		cont=1;
 	}
@@ -214,6 +244,12 @@ public class Ventana1Controller {
 		Anchor3.setStyle("-fx-background-color: #34B8D4;");
 		Anchor4.setStyle("-fx-background-color: #34B8D4;");
 		Anchor5.setStyle("-fx-background-color: #34B8D4;");
+		img6.setStyle("-fx-opacity:1");
+		img1.setStyle("-fx-opacity:0.5");
+		img2.setStyle("-fx-opacity:0.5");
+		img3.setStyle("-fx-opacity:0.5");
+		img4.setStyle("-fx-opacity:0.5");
+		img5.setStyle("-fx-opacity:0.5");
 		cont=1;
 	}
 
