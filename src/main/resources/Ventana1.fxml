@@ -1,22 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Ventana1Controller"
+            style="-fx-background-color: #34B8D4;">
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+
+        </rowConstraints>
+         <children>
+            <AnchorPane fx:id="Anchor1" onMouseClicked="#clickear1" prefHeight="200.0" prefWidth="200.0" >
+               <children>
+                  <ProgressBar fx:id="progress1" layoutX="50.0" layoutY="150.0" prefHeight="18.0" prefWidth="148.0" progress="50.0" />
+                  <ImageView fx:id="img1" fitHeight="100.0" fitWidth="100.0" layoutX="61.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="l3Vida1" layoutX="10.0" layoutY="170.0" prefHeight="20.0" prefWidth="50.0" />
+                  <Label layoutX="11.0" layoutY="151.0" text="PS" />
+                  <Label fx:id="l1Nombre1" layoutX="29.0" layoutY="10.0" />
+                  <Label fx:id="l2Nivel1" layoutX="120.0" layoutY="10.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="Anchor2" onMouseClicked="#clickear2" prefHeight="200.0" prefWidth="200.0"  GridPane.columnIndex="1">
+               <children>
+                  <ImageView fx:id="img2" fitHeight="100.0" fitWidth="100.0" layoutX="60.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true" />
+                  <ProgressBar fx:id="progress2" layoutX="50.0" layoutY="150.0" prefHeight="18.0" prefWidth="148.0" progress="0.0" />
+                  <Label layoutX="11.0" layoutY="151.0" text="PS" />
+                  <Label fx:id="l6Vida2" layoutX="10.0" layoutY="170.0" prefHeight="20.0" prefWidth="50.0" />
+                  <Label fx:id="l4Nombre2" layoutX="30.0" layoutY="10.0" />
+                  <Label fx:id="l5Nivel2" layoutX="120.0" layoutY="10.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="Anchor4" onMouseClicked="#clickear4" prefHeight="200.0" prefWidth="200.0"  GridPane.rowIndex="1">
+               <children>
+                  <ImageView fx:id="img4" fitHeight="100.0" fitWidth="100.0" layoutX="60.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true" />
+                  <ProgressBar fx:id="progress4" layoutX="50.0" layoutY="150.0" prefHeight="18.0" prefWidth="148.0" progress="0.0" />
+                  <Label fx:id="l12Vida4" layoutX="10.0" layoutY="170.0" prefHeight="20.0" prefWidth="50.0" />
+                  <Label layoutX="11.0" layoutY="151.0" text="PS" />
+                  <Label fx:id="l10Nombre4" layoutX="30.0" layoutY="10.0" />
+                  <Label fx:id="l11Nivel4" layoutX="120.0" layoutY="10.0" />
+               </children></AnchorPane>
+            <AnchorPane fx:id="Anchor5" onMouseClicked="#clickear5" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fx:id="img5" fitHeight="100.0" fitWidth="100.0" layoutX="60.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true" />
+                  <ProgressBar fx:id="progress5" layoutX="50.0" layoutY="150.0" prefHeight="18.0" prefWidth="148.0" progress="0.0" />
+                  <Label fx:id="l15Vida5" layoutX="10.0" layoutY="170.0" prefHeight="20.0" prefWidth="50.0" />
+                  <Label layoutX="11.0" layoutY="151.0" text="PS" />
+                  <Label fx:id="l13Nombre5" layoutX="30.0" layoutY="10.0" />
+                  <Label fx:id="l14Nivel5" layoutX="120.0" layoutY="10.0" />
+               </children></AnchorPane>
+            <AnchorPane fx:id="Anchor6" onMouseClicked="#clickear6" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fx:id="img6" fitHeight="100.0" fitWidth="100.0" layoutX="60.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true" />
+                  <ProgressBar fx:id="progress6" layoutX="50.0" layoutY="150.0" prefHeight="18.0" prefWidth="148.0" progress="0.0" />
+                  <Label fx:id="l18Vida6" layoutX="10.0" layoutY="170.0" prefHeight="20.0" prefWidth="50.0" />
+                  <Label layoutX="11.0" layoutY="151.0" text="PS" />
+                  <Label fx:id="l16Nombre6" layoutX="30.0" layoutY="10.0" />
+                  <Label fx:id="l17Nivel6" layoutX="120.0" layoutY="10.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="Anchor3" onMouseClicked="#clickear3" prefHeight="200.0" prefWidth="200.0"  GridPane.columnIndex="2">
+               <children>
+                  <ImageView fx:id="img3" fitHeight="100.0" fitWidth="100.0" layoutX="60.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="l9Vida3" layoutX="10.0" layoutY="170.0" prefHeight="20.0" prefWidth="50.0" />
+                  <ProgressBar fx:id="progress3" layoutX="50.0" layoutY="150.0" prefHeight="18.0" prefWidth="148.0" progress="0.0" />
+                  <Label layoutX="11.0" layoutY="151.0" text="PS" />
+                  <Label fx:id="l7Nombre3" layoutX="30.0" layoutY="10.0" />
+                  <Label fx:id="l8Nivel3" layoutX="120.0" layoutY="10.0" />
+               </children>
+            </AnchorPane>
 
 
-<BorderPane xmlns:fx="http://javafx.com/fxml/1"
-	xmlns="http://javafx.com/javafx/8.0.231"
-	fx:controller="sample.Ventana1Controller">
-	<center>
-		<Button mnemonicParsing="false"
-			onAction="#onButtonAbrirClicked" text="Abrir"
-			BorderPane.alignment="CENTER" />
-	</center>
-	<opaqueInsets>
-		<Insets />
-	</opaqueInsets>
-	<padding>
-		<Insets bottom="100.0" left="100.0" right="100.0" top="100.0" />
-	</padding>
+         </children>
+      </GridPane>
+   </center>
+   <bottom>
+      <AnchorPane fx:id="Anchor7" prefHeight="30.0" prefWidth="100.0"  BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="484.0" mnemonicParsing="false" text="Salir.." />
+            <Label graphicTextGap="20.0" layoutX="59.0" layoutY="4.0" text="ELIGE UN POKEMON..." textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+         </children></AnchorPane>
+   </bottom>
 </BorderPane>
