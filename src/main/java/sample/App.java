@@ -16,7 +16,7 @@ public class App extends Application {
 
             System.out.println("Empezando");
             BorderPane root = FXMLLoader.load(getClass().getResource("/Ventana1.fxml"));
-            Scene scene = new Scene(root,680,400);
+            Scene scene = new Scene(root,700,400);
             primaryStage.setScene(scene);
             primaryStage.show();
             primaryStage.setResizable(false);

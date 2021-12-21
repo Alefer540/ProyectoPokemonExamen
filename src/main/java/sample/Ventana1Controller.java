@@ -135,9 +135,6 @@ public class Ventana1Controller {
 	private void clickear1() {
 		System.out.println("anchor pulsado");
 		Anchor1.setStyle("-fx-background-color:#1D6B7B;");
-		l1Nombre1.setStyle("-fx-text-fill: #0BE1F0;");
-		l2Nivel1.setStyle("-fx-text-fill: #0BE1F0;");
-		l3Vida1.setStyle("-fx-text-fill: #0BE1F0;");
 		Anchor5.setStyle("-fx-background-color: #34B8D4;");
 		Anchor2.setStyle("-fx-background-color: #34B8D4;");
 		Anchor3.setStyle("-fx-background-color: #34B8D4;");
@@ -155,9 +152,6 @@ public class Ventana1Controller {
 	private void clickear2() {
 		System.out.println("anchor pulsado");
 		Anchor2.setStyle("-fx-background-color:#1D6B7B;");
-		l4Nombre2.setStyle("-fx-text-fill: #0BE1F0;");
-		l5Nivel2.setStyle("-fx-text-fill: #0BE1F0;");
-		l6Vida2.setStyle("-fx-text-fill: #0BE1F0;");
 		Anchor1.setStyle("-fx-background-color: #34B8D4;");
 		Anchor5.setStyle("-fx-background-color: #34B8D4;");
 		Anchor3.setStyle("-fx-background-color: #34B8D4;");
@@ -175,9 +169,6 @@ public class Ventana1Controller {
 	private void clickear3() {
 		System.out.println("anchor pulsado");
 		Anchor3.setStyle("-fx-background-color:#1D6B7B;");
-		l7Nombre3.setStyle("-fx-text-fill: #0BE1F0;");
-		l8Nivel3.setStyle("-fx-text-fill: #0BE1F0;");
-		l9Vida3.setStyle("-fx-text-fill: #0BE1F0;");
 		Anchor1.setStyle("-fx-background-color: #34B8D4;");
 		Anchor2.setStyle("-fx-background-color: #34B8D4;");
 		Anchor5.setStyle("-fx-background-color: #34B8D4;");
@@ -195,9 +186,6 @@ public class Ventana1Controller {
 	private void clickear4() {
 		System.out.println("anchor pulsado");
 		Anchor4.setStyle("-fx-background-color:#1D6B7B;");
-		l10Nombre4.setStyle("-fx-text-fill: #0BE1F0;");
-		l11Nivel4.setStyle("-fx-text-fill: #0BE1F0;");
-		l12Vida4.setStyle("-fx-text-fill: #0BE1F0;");
 		Anchor1.setStyle("-fx-background-color: #34B8D4;");
 		Anchor2.setStyle("-fx-background-color: #34B8D4;");
 		Anchor3.setStyle("-fx-background-color: #34B8D4;");
@@ -215,9 +203,6 @@ public class Ventana1Controller {
 	private void clickear5() {
 		System.out.println("anchor pulsado");
 		Anchor5.setStyle("-fx-background-color:#1D6B7B;");
-		l13Nombre5.setStyle("-fx-text-fill: #0BE1F0;");
-		l14Nivel5.setStyle("-fx-text-fill: #0BE1F0;");
-		l15Vida5.setStyle("-fx-text-fill: #0BE1F0;");
 		Anchor1.setStyle("-fx-background-color: #34B8D4;");
 		Anchor2.setStyle("-fx-background-color: #34B8D4;");
 		Anchor3.setStyle("-fx-background-color: #34B8D4;");
@@ -236,9 +221,6 @@ public class Ventana1Controller {
 	private void clickear6() {
 		System.out.println("anchor pulsado");
 		Anchor6.setStyle("-fx-background-color: #1D6B7B;");
-		l16Nombre6.setStyle("-fx-text-fill: #0BE1F0;");
-		l17Nivel6.setStyle("-fx-text-fill: #0BE1F0;");
-		l18Vida6.setStyle("-fx-text-fill: #0BE1F0;");
 		Anchor1.setStyle("-fx-background-color: #34B8D4;");
 		Anchor2.setStyle("-fx-background-color: #34B8D4;");
 		Anchor3.setStyle("-fx-background-color: #34B8D4;");

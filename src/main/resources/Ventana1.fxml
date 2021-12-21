@@ -3,20 +3,18 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
-<?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="600.0" style="-fx-background-color: #34B8D4;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Ventana1Controller">
    <center>
-      <GridPane BorderPane.alignment="CENTER">
+      <GridPane prefHeight="359.0" prefWidth="600.0" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -24,7 +22,7 @@
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
 
         </rowConstraints>
          <children>
@@ -32,68 +30,71 @@
                <children>
                   <ProgressBar fx:id="progress1" layoutX="50.0" layoutY="150.0" prefHeight="18.0" prefWidth="148.0" progress="50.0" />
                   <Label fx:id="l3Vida1" layoutX="10.0" layoutY="170.0" prefHeight="20.0" prefWidth="50.0" />
-                  <Label layoutX="11.0" layoutY="151.0" text="PS" />
                   <Label fx:id="l1Nombre1" layoutX="29.0" layoutY="10.0" />
-                  <Label fx:id="l2Nivel1" layoutX="120.0" layoutY="10.0" />
                   <ImageView fx:id="img1" fitHeight="100.0" fitWidth="100.0" layoutX="60.0" layoutY="35.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
                      <effect>
-                        <DropShadow>
-                           <color>
-                              <Color red="0.2763157784938812" green="0.26096490025520325" blue="0.26096490025520325" />
-                           </color>
-                        </DropShadow>
+                        <InnerShadow />
                      </effect>
                   </ImageView>
+                  <Label fx:id="l2Nivel1" layoutX="120.0" layoutY="10.0" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="Anchor2" onMouseClicked="#clickear2" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                <children>
                   <ImageView fx:id="img2" fitHeight="100.0" fitWidth="100.0" layoutX="60.0" layoutY="35.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
                      <effect>
-                        <SepiaTone />
+                        <InnerShadow />
                      </effect>
                   </ImageView>
                   <ProgressBar fx:id="progress2" layoutX="50.0" layoutY="150.0" prefHeight="18.0" prefWidth="148.0" progress="0.0" />
-                  <Label layoutX="11.0" layoutY="151.0" text="PS" />
                   <Label fx:id="l6Vida2" layoutX="10.0" layoutY="170.0" prefHeight="20.0" prefWidth="50.0" />
                   <Label fx:id="l4Nombre2" layoutX="30.0" layoutY="10.0" />
                   <Label fx:id="l5Nivel2" layoutX="120.0" layoutY="10.0" />
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="Anchor4" onMouseClicked="#clickear4" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+            <AnchorPane fx:id="Anchor4" onMouseClicked="#clickear4" prefHeight="165.0" prefWidth="200.0" GridPane.rowIndex="1">
                <children>
-                  <ImageView fx:id="img4" fitHeight="100.0" fitWidth="100.0" layoutX="60.0" layoutY="35.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" />
-                  <ProgressBar fx:id="progress4" layoutX="50.0" layoutY="150.0" prefHeight="18.0" prefWidth="148.0" progress="0.0" />
+                  <ImageView fx:id="img4" fitHeight="100.0" fitWidth="100.0" layoutX="60.0" layoutY="35.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <InnerShadow />
+                     </effect></ImageView>
+                  <ProgressBar fx:id="progress4" layoutX="46.0" layoutY="152.0" prefHeight="18.0" prefWidth="148.0" progress="0.0" />
                   <Label fx:id="l12Vida4" layoutX="10.0" layoutY="170.0" prefHeight="20.0" prefWidth="50.0" />
-                  <Label layoutX="11.0" layoutY="151.0" text="PS" />
                   <Label fx:id="l10Nombre4" layoutX="30.0" layoutY="10.0" />
                   <Label fx:id="l11Nivel4" layoutX="120.0" layoutY="10.0" />
                </children></AnchorPane>
             <AnchorPane fx:id="Anchor5" onMouseClicked="#clickear5" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <ImageView fx:id="img5" fitHeight="100.0" fitWidth="100.0" layoutX="60.0" layoutY="35.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" />
                   <ProgressBar fx:id="progress5" layoutX="50.0" layoutY="150.0" prefHeight="18.0" prefWidth="148.0" progress="0.0" />
+                  <ImageView fx:id="img5" fitHeight="100.0" fitWidth="100.0" layoutX="60.0" layoutY="35.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </ImageView>
                   <Label fx:id="l15Vida5" layoutX="10.0" layoutY="170.0" prefHeight="20.0" prefWidth="50.0" />
-                  <Label layoutX="11.0" layoutY="151.0" text="PS" />
                   <Label fx:id="l13Nombre5" layoutX="30.0" layoutY="10.0" />
                   <Label fx:id="l14Nivel5" layoutX="120.0" layoutY="10.0" />
                </children></AnchorPane>
             <AnchorPane fx:id="Anchor6" onMouseClicked="#clickear6" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <children>
-                  <ImageView fx:id="img6" fitHeight="100.0" fitWidth="100.0" layoutX="60.0" layoutY="35.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="img6" fitHeight="100.0" fitWidth="100.0" layoutX="60.0" layoutY="35.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <InnerShadow />
+                     </effect></ImageView>
                   <ProgressBar fx:id="progress6" layoutX="50.0" layoutY="150.0" prefHeight="18.0" prefWidth="148.0" progress="0.0" />
                   <Label fx:id="l18Vida6" layoutX="10.0" layoutY="170.0" prefHeight="20.0" prefWidth="50.0" />
-                  <Label layoutX="11.0" layoutY="151.0" text="PS" />
                   <Label fx:id="l16Nombre6" layoutX="30.0" layoutY="10.0" />
                   <Label fx:id="l17Nivel6" layoutX="120.0" layoutY="10.0" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="Anchor3" onMouseClicked="#clickear3" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
                <children>
-                  <ImageView fx:id="img3" fitHeight="100.0" fitWidth="100.0" layoutX="60.0" layoutY="35.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="img3" fitHeight="100.0" fitWidth="100.0" layoutX="50.0" layoutY="35.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <InnerShadow />
+                     </effect></ImageView>
                   <Label fx:id="l9Vida3" layoutX="10.0" layoutY="170.0" prefHeight="20.0" prefWidth="50.0" />
                   <ProgressBar fx:id="progress3" layoutX="50.0" layoutY="150.0" prefHeight="18.0" prefWidth="148.0" progress="0.0" />
-                  <Label layoutX="11.0" layoutY="151.0" text="PS" />
                   <Label fx:id="l7Nombre3" layoutX="30.0" layoutY="10.0" />
                   <Label fx:id="l8Nivel3" layoutX="120.0" layoutY="10.0" />
                </children>
@@ -104,7 +105,7 @@
       </GridPane>
    </center>
    <bottom>
-      <AnchorPane fx:id="Anchor7" prefHeight="30.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <AnchorPane fx:id="Anchor7" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #1D6B7B;" BorderPane.alignment="CENTER">
          <children>
             <Button layoutX="484.0" mnemonicParsing="false" text="Salir.." />
             <Label graphicTextGap="20.0" layoutX="59.0" layoutY="4.0" text="ELIGE UN POKEMON..." textOverrun="CENTER_WORD_ELLIPSIS">
