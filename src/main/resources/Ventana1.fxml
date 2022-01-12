@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -12,7 +13,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="600.0" style="-fx-background-color: #34B8D4;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Ventana1Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="600.0" style="-fx-background-color: #7D6A87;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Ventana1Controller">
    <center>
       <GridPane prefHeight="359.0" prefWidth="600.0" BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -24,19 +25,42 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
 
-        </rowConstraints>
+              </rowConstraints>
          <children>
             <AnchorPane fx:id="Anchor1" onMouseClicked="#clickear1" prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <ProgressBar fx:id="progress1" layoutX="50.0" layoutY="150.0" prefHeight="18.0" prefWidth="148.0" progress="50.0" />
-                  <Label fx:id="l3Vida1" layoutX="10.0" layoutY="170.0" prefHeight="20.0" prefWidth="50.0" />
-                  <Label fx:id="l1Nombre1" layoutX="29.0" layoutY="10.0" />
+                  <ProgressBar fx:id="progress1" layoutX="39.0" layoutY="150.0" prefHeight="11.0" prefWidth="171.0" progress="50.0" style="-fx-accent: #44e747;" />
+                  <Label fx:id="l3Vida1" layoutX="10.0" layoutY="165.0" prefHeight="10.0" prefWidth="50.0" textFill="#f9f9fa">
+                     <font>
+                        <Font name="Comic Sans MS" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="l1Nombre1" layoutX="20.0" layoutY="10.0" textFill="#f9f9fa">
+                     <font>
+                        <Font name="Comic Sans MS" size="15.0" />
+                     </font>
+                  </Label>
                   <ImageView fx:id="img1" fitHeight="100.0" fitWidth="100.0" layoutX="60.0" layoutY="35.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
                      <effect>
                         <InnerShadow />
                      </effect>
                   </ImageView>
-                  <Label fx:id="l2Nivel1" layoutX="120.0" layoutY="10.0" />
+                  <Label fx:id="l2Nivel1" layoutX="170.0" layoutY="10.0" textFill="#f9f9fa">
+                     <font>
+                        <Font name="Comic Sans MS" size="12.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="16.0" fitWidth="20.0" layoutX="21.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ps.PNG" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Sexo1" fitHeight="15.0" fitWidth="15.0" layoutX="160.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="180.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@tick.PNG" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
             <AnchorPane fx:id="Anchor2" onMouseClicked="#clickear2" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
@@ -46,10 +70,33 @@
                         <InnerShadow />
                      </effect>
                   </ImageView>
-                  <ProgressBar fx:id="progress2" layoutX="50.0" layoutY="150.0" prefHeight="18.0" prefWidth="148.0" progress="0.0" />
-                  <Label fx:id="l6Vida2" layoutX="10.0" layoutY="170.0" prefHeight="20.0" prefWidth="50.0" />
-                  <Label fx:id="l4Nombre2" layoutX="30.0" layoutY="10.0" />
-                  <Label fx:id="l5Nivel2" layoutX="120.0" layoutY="10.0" />
+                  <ProgressBar fx:id="progress2" layoutX="39.0" layoutY="150.0" prefHeight="11.0" prefWidth="172.0" progress="0.0" style="-fx-accent: #44e747;" />
+                  <Label fx:id="l6Vida2" layoutX="10.0" layoutY="165.0" prefHeight="10.0" prefWidth="50.0" textFill="#f9f9fa">
+                     <font>
+                        <Font name="Comic Sans MS" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="l4Nombre2" layoutX="20.0" layoutY="10.0" textFill="#f9f9fa">
+                     <font>
+                        <Font name="Comic Sans MS" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="l5Nivel2" layoutX="170.0" layoutY="10.0" textFill="#f9f9fa">
+                     <font>
+                        <Font name="Comic Sans MS" size="12.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="16.0" fitWidth="20.0" layoutX="21.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ps.PNG" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Sexo2" fitHeight="15.0" fitWidth="15.0" layoutX="160.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="180.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@tick.PNG" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
             <AnchorPane fx:id="Anchor4" onMouseClicked="#clickear4" prefHeight="165.0" prefWidth="200.0" GridPane.rowIndex="1">
@@ -57,61 +104,161 @@
                   <ImageView fx:id="img4" fitHeight="100.0" fitWidth="100.0" layoutX="60.0" layoutY="35.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
                      <effect>
                         <InnerShadow />
-                     </effect></ImageView>
-                  <ProgressBar fx:id="progress4" layoutX="46.0" layoutY="152.0" prefHeight="18.0" prefWidth="148.0" progress="0.0" />
-                  <Label fx:id="l12Vida4" layoutX="10.0" layoutY="170.0" prefHeight="20.0" prefWidth="50.0" />
-                  <Label fx:id="l10Nombre4" layoutX="30.0" layoutY="10.0" />
-                  <Label fx:id="l11Nivel4" layoutX="120.0" layoutY="10.0" />
-               </children></AnchorPane>
+                     </effect>
+                  </ImageView>
+                  <ProgressBar fx:id="progress4" layoutX="39.0" layoutY="150.0" prefHeight="11.0" prefWidth="171.0" progress="0.0" style="-fx-accent: #44e747;" />
+                  <Label fx:id="l12Vida4" layoutX="10.0" layoutY="165.0" prefHeight="10.0" prefWidth="50.0" textFill="#f9f9fa">
+                     <font>
+                        <Font name="Comic Sans MS" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="l10Nombre4" layoutX="20.0" layoutY="10.0" textFill="#f9f9fa">
+                     <font>
+                        <Font name="Comic Sans MS" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="l11Nivel4" layoutX="170.0" layoutY="10.0" textFill="#f9f9fa">
+                     <font>
+                        <Font name="Comic Sans MS" size="12.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="16.0" fitWidth="20.0" layoutX="21.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ps.PNG" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Sexo4" fitHeight="15.0" fitWidth="15.0" layoutX="160.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="180.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@tick.PNG" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
             <AnchorPane fx:id="Anchor5" onMouseClicked="#clickear5" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <ProgressBar fx:id="progress5" layoutX="50.0" layoutY="150.0" prefHeight="18.0" prefWidth="148.0" progress="0.0" />
+                  <ProgressBar fx:id="progress5" layoutX="39.0" layoutY="150.0" prefHeight="11.0" prefWidth="171.0" progress="0.0" style="-fx-accent: #44e747;" />
                   <ImageView fx:id="img5" fitHeight="100.0" fitWidth="100.0" layoutX="60.0" layoutY="35.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
                      <effect>
                         <InnerShadow />
                      </effect>
                   </ImageView>
-                  <Label fx:id="l15Vida5" layoutX="10.0" layoutY="170.0" prefHeight="20.0" prefWidth="50.0" />
-                  <Label fx:id="l13Nombre5" layoutX="30.0" layoutY="10.0" />
-                  <Label fx:id="l14Nivel5" layoutX="120.0" layoutY="10.0" />
-               </children></AnchorPane>
+                  <Label fx:id="l15Vida5" layoutX="10.0" layoutY="165.0" prefHeight="10.0" prefWidth="50.0" textFill="#f9f9fa">
+                     <font>
+                        <Font name="Comic Sans MS" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="l13Nombre5" layoutX="20.0" layoutY="10.0" textFill="#f9f9fa">
+                     <font>
+                        <Font name="Comic Sans MS" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="l14Nivel5" layoutX="170.0" layoutY="10.0" textFill="#f9f9fa">
+                     <font>
+                        <Font name="Comic Sans MS" size="12.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="16.0" fitWidth="20.0" layoutX="21.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ps.PNG" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Sexo5" fitHeight="15.0" fitWidth="15.0" layoutX="160.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="180.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@tick.PNG" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
             <AnchorPane fx:id="Anchor6" onMouseClicked="#clickear6" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <children>
                   <ImageView fx:id="img6" fitHeight="100.0" fitWidth="100.0" layoutX="60.0" layoutY="35.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
                      <effect>
                         <InnerShadow />
-                     </effect></ImageView>
-                  <ProgressBar fx:id="progress6" layoutX="50.0" layoutY="150.0" prefHeight="18.0" prefWidth="148.0" progress="0.0" />
-                  <Label fx:id="l18Vida6" layoutX="10.0" layoutY="170.0" prefHeight="20.0" prefWidth="50.0" />
-                  <Label fx:id="l16Nombre6" layoutX="30.0" layoutY="10.0" />
-                  <Label fx:id="l17Nivel6" layoutX="120.0" layoutY="10.0" />
+                     </effect>
+                  </ImageView>
+                  <ProgressBar fx:id="progress6" layoutX="39.0" layoutY="150.0" prefHeight="11.0" prefWidth="171.0" progress="0.0" style="-fx-accent: #44e747;" />
+                  <Label fx:id="l18Vida6" layoutX="10.0" layoutY="165.0" prefHeight="10.0" prefWidth="50.0" textFill="#f9f9fa">
+                     <font>
+                        <Font name="Comic Sans MS" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="l16Nombre6" layoutX="20.0" layoutY="10.0" textFill="#f9f9fa">
+                     <font>
+                        <Font name="Comic Sans MS" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="l17Nivel6" layoutX="170.0" layoutY="10.0" textFill="#f9f9fa">
+                     <font>
+                        <Font name="Comic Sans MS" size="12.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="16.0" fitWidth="20.0" layoutX="21.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ps.PNG" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Sexo6" fitHeight="15.0" fitWidth="15.0" layoutX="160.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="180.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@tick.PNG" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
             <AnchorPane fx:id="Anchor3" onMouseClicked="#clickear3" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
                <children>
-                  <ImageView fx:id="img3" fitHeight="100.0" fitWidth="100.0" layoutX="50.0" layoutY="35.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="img3" fitHeight="100.0" fitWidth="100.0" layoutX="60.0" layoutY="35.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
                      <effect>
                         <InnerShadow />
-                     </effect></ImageView>
-                  <Label fx:id="l9Vida3" layoutX="10.0" layoutY="170.0" prefHeight="20.0" prefWidth="50.0" />
-                  <ProgressBar fx:id="progress3" layoutX="50.0" layoutY="150.0" prefHeight="18.0" prefWidth="148.0" progress="0.0" />
-                  <Label fx:id="l7Nombre3" layoutX="30.0" layoutY="10.0" />
-                  <Label fx:id="l8Nivel3" layoutX="120.0" layoutY="10.0" />
+                     </effect>
+                  </ImageView>
+                  <Label fx:id="l9Vida3" layoutX="10.0" layoutY="165.0" prefHeight="10.0" prefWidth="50.0" textFill="#f9f9fa">
+                     <font>
+                        <Font name="Comic Sans MS" size="12.0" />
+                     </font>
+                  </Label>
+                  <ProgressBar fx:id="progress3" layoutX="39.0" layoutY="150.0" prefHeight="11.0" prefWidth="171.0" progress="0.0" style="-fx-accent: #44e747;" />
+                  <Label fx:id="l7Nombre3" layoutX="20.0" layoutY="10.0" textFill="#f9f9fa">
+                     <font>
+                        <Font name="Comic Sans MS" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="l8Nivel3" layoutX="170.0" layoutY="10.0" textFill="#f9f9fa">
+                     <font>
+                        <Font name="Comic Sans MS" size="12.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="16.0" fitWidth="20.0" layoutX="21.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ps.PNG" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Sexo3" fitHeight="15.0" fitWidth="15.0" layoutX="160.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="180.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@tick.PNG" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
 
-
-         </children>
+      
+               </children>
       </GridPane>
    </center>
    <bottom>
-      <AnchorPane fx:id="Anchor7" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #1D6B7B;" BorderPane.alignment="CENTER">
+      <AnchorPane fx:id="Anchor7" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #675073;" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="484.0" mnemonicParsing="false" text="Salir.." />
-            <Label graphicTextGap="20.0" layoutX="59.0" layoutY="4.0" text="ELIGE UN POKEMON..." textOverrun="CENTER_WORD_ELLIPSIS">
+            <Button fx:id="boton_combate1" disable="true" layoutX="484.0" mnemonicParsing="false" onMouseClicked="#pelea" opacity="0.0" text="Salir.." />
+            <Label graphicTextGap="20.0" layoutX="59.0" layoutY="4.0" text="ELIGE UN POKEMON..." textFill="#f9f9fa" textOverrun="CENTER_WORD_ELLIPSIS">
                <font>
-                  <Font size="13.0" />
+                  <Font name="Comic Sans MS" size="13.0" />
                </font></Label>
          </children></AnchorPane>
    </bottom>
+   <top>
+      <AnchorPane prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #675073;" BorderPane.alignment="CENTER" />
+   </top>
 </BorderPane>
