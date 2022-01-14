@@ -9,6 +9,7 @@ import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -21,24 +22,20 @@ public class Ventana1Controller {
 	int cont=0;
 	Pokemon x;
 
-	Pokemon p1 = new Pokemon("Jolteon",204f,204f,"LV.65",new Image("https://assets.pokemon.com/assets/cms2/img/pokedex/full/135.png"),new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"),new Image("https://images.wikidexcdn.net/mwuploads/wikidex/0/08/latest/20150321174011/Jolteon_espalda_G6.gif"));
-	Pokemon p2 =new Pokemon ("Charizard",148f,148f,"LV.45",new Image("https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png"),new Image("https://cdn-icons-png.flaticon.com/512/32/32353.png"), new Image("https://images.wikidexcdn.net/mwuploads/wikidex/4/42/latest/20101119123021/Charizard_espalda_G5.gif"));
-	Pokemon p3=new Pokemon("Vapereon",234f,234f,"LV.54",new Image("https://assets.pokemon.com/assets/cms2/img/pokedex/full/134.png"),new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"), new Image("https://images.wikidexcdn.net/mwuploads/wikidex/1/1a/latest/20101230113549/Vaporeon_espalda_G5.gif"));
-	Pokemon p5=new Pokemon("Pikachu",222f,222f,"LV.65",new Image("https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png"),new Image( "https://cdn-icons-png.flaticon.com/512/32/32353.png"),new Image("https://images.wikidexcdn.net/mwuploads/wikidex/4/44/latest/20101101164123/Pikachu_espalda_G5.gif"));
-	Pokemon p4=new Pokemon("Mewtwo",298f,298f,"LV.75",new Image("https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png"),new Image("https://cdn-icons-png.flaticon.com/512/32/32353.png"),new Image("https://images.wikidexcdn.net/mwuploads/wikidex/9/9a/latest/20101210174929/Mewtwo_espalda_G5.gif"));
-	Pokemon p6=new Pokemon("Butterfree",160f,160f,"LV.54", new Image("https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png"),new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"),new Image("https://images.wikidexcdn.net/mwuploads/wikidex/2/28/latest/20110107052640/Butterfree_espalda_G5_hembra.gif"));
+
+
+	Pokemon p1 = new Pokemon("Jolteon",204f,204f,"LV.65",new Image("https://static.wikia.nocookie.net/espokemon/images/5/58/Jolteon_NB.gif/revision/latest/scale-to-width-down/55?cb=20101102184202"),new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"),new Image("https://images.wikidexcdn.net/mwuploads/wikidex/0/08/latest/20150321174011/Jolteon_espalda_G6.gif"));
+	Pokemon p2 =new Pokemon ("Charizard",148f,148f,"LV.45",new Image("https://static.wikia.nocookie.net/espokemon/images/8/80/Charizard_NB.gif/revision/latest/scale-to-width-down/98?cb=20101031232142"),new Image("https://cdn-icons-png.flaticon.com/512/32/32353.png"), new Image("https://images.wikidexcdn.net/mwuploads/wikidex/4/42/latest/20101119123021/Charizard_espalda_G5.gif"));
+	Pokemon p3=new Pokemon("Vapereon",234f,234f,"LV.54",new Image("https://static.wikia.nocookie.net/espokemon/images/f/f9/Vaporeon_NB.gif/revision/latest/scale-to-width-down/59?cb=20101102184102"),new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"), new Image("https://images.wikidexcdn.net/mwuploads/wikidex/1/1a/latest/20101230113549/Vaporeon_espalda_G5.gif"));
+	Pokemon p5=new Pokemon("Pikachu",222f,222f,"LV.65",new Image("https://static.wikia.nocookie.net/espokemon/images/1/19/Pikachu_NB.gif/revision/latest/scale-to-width-down/63?cb=20101031232752"),new Image( "https://cdn-icons-png.flaticon.com/512/32/32353.png"),new Image("https://images.wikidexcdn.net/mwuploads/wikidex/4/44/latest/20101101164123/Pikachu_espalda_G5.gif"));
+	Pokemon p4=new Pokemon("Mewtwo",298f,298f,"LV.75",new Image("https://static.wikia.nocookie.net/espokemon/images/8/83/Mewtwo_NB.gif/revision/latest/scale-to-width-down/100?cb=20101105165130"),new Image("https://cdn-icons-png.flaticon.com/512/32/32353.png"),new Image("https://images.wikidexcdn.net/mwuploads/wikidex/9/9a/latest/20101210174929/Mewtwo_espalda_G5.gif"));
+	Pokemon p6=new Pokemon("Butterfree",160f,160f,"LV.54", new Image("https://static.wikia.nocookie.net/espokemon/images/e/ed/Butterfree_NB_hembra.gif/revision/latest/scale-to-width-down/63?cb=20110106222132"),new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"),new Image("https://images.wikidexcdn.net/mwuploads/wikidex/2/28/latest/20110107052640/Butterfree_espalda_G5_hembra.gif"));
+
+	//POKEMON 1
+	@FXML
+	AnchorPane Anchor1;
 	@FXML
 	ImageView Sexo1;
-	@FXML
-	ImageView Sexo2;
-	@FXML
-	ImageView Sexo3;
-	@FXML
-	ImageView Sexo4;
-	@FXML
-	ImageView Sexo5;
-	@FXML
-	ImageView Sexo6;
 	@FXML
 	Label l1Nombre1;
 	@FXML
@@ -46,11 +43,31 @@ public class Ventana1Controller {
 	@FXML
 	Label l3Vida1;
 	@FXML
+	ImageView img1;
+	@FXML
+	ProgressBar progress1;
+	//POKEMON 2
+	@FXML
+	AnchorPane Anchor2;
+	@FXML
+	ImageView Sexo2;
+	@FXML
 	Label l4Nombre2;
 	@FXML
 	Label l5Nivel2;
 	@FXML
 	Label l6Vida2;
+	@FXML
+	ImageView img2;
+	@FXML
+	ProgressBar progress2;
+	//POKEMON 3
+	@FXML
+	AnchorPane Anchor3;
+	@FXML
+	ImageView Sexo3;
+	@FXML
+	ImageView img3;
 	@FXML
 	Label l7Nombre3;
 	@FXML
@@ -58,11 +75,27 @@ public class Ventana1Controller {
 	@FXML
 	Label l9Vida3;
 	@FXML
+	ProgressBar progress3;
+	//POKEMON4
+	@FXML
+	AnchorPane Anchor4;
+	@FXML
+	ImageView img4;
+	@FXML
+	ImageView Sexo4;
+	@FXML
 	Label l10Nombre4;
 	@FXML
 	Label l11Nivel4;
 	@FXML
+	ProgressBar progress4;
+	@FXML
 	Label l12Vida4;
+	//POKEMON 5
+	@FXML
+	AnchorPane Anchor5;
+	@FXML
+	ImageView img5;
 	@FXML
 	Label l13Nombre5;
 	@FXML
@@ -70,52 +103,30 @@ public class Ventana1Controller {
 	@FXML
 	Label l15Vida5;
 	@FXML
+	ProgressBar progress5;
+	@FXML
+	ImageView Sexo5;
+	//POKEMON 6
+	@FXML
+	AnchorPane Anchor6;
+	@FXML
+	ImageView img6;
+	@FXML
+	ImageView Sexo6;
+	@FXML
 	Label l16Nombre6;
 	@FXML
 	Label l17Nivel6;
 	@FXML
 	Label l18Vida6;
 	@FXML
-	ImageView img1;
-	@FXML
-	ImageView img2;
-	@FXML
-	ImageView img3;
-	@FXML
-	ImageView img4;
-	@FXML
-	ImageView img5;
-	@FXML
-	ImageView img6;
-	@FXML
-	ProgressBar progress1;
-	@FXML
-	ProgressBar progress2;
-	@FXML
-	ProgressBar progress3;
-	@FXML
-	ProgressBar progress4;
-	@FXML
-	ProgressBar progress5;
-	@FXML
 	ProgressBar progress6;
-	@FXML
-	AnchorPane Anchor1;
-	@FXML
-	AnchorPane Anchor2;
-	@FXML
-	AnchorPane Anchor3;
-	@FXML
-	AnchorPane Anchor4;
-	@FXML
-	AnchorPane Anchor5;
-	@FXML
-	AnchorPane Anchor6;
+	//boton siguiente pagina
     @FXML
 	Button boton_combate1;
 
 
-
+	private Ventana2controller v;
 	@FXML
 	public void initialize() {
 		Sexo1.setImage(p1.sexo);
@@ -236,7 +247,7 @@ public class Ventana1Controller {
 			Stage stage2 = new Stage();
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/ventana2.fxml"));
 
-			AnchorPane root =  loader.load();
+			BorderPane root =  loader.load();
 			Scene scene = new Scene(root, 700, 450);
 
 			stage2.setScene(scene);
