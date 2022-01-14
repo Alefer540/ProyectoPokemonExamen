@@ -1,20 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Ventana2controller">
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-image: url('https://static.wikia.nocookie.net/espokemon/images/d/dd/Campo_de_batalla_DPPt_3.png/revision/latest/scale-to-width-down/257?cb=20090424143330'); -fx-background-size: 100% 100%;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="326.0" prefWidth="700.0" style="-fx-background-image: url('https://static.wikia.nocookie.net/espokemon/images/e/e4/Campo_de_batalla_DPPt_2.png/revision/latest/scale-to-width-down/257?cb=20090424143324'); -fx-background-size: 100% 100%;" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fx:id="img_espaldas" fitHeight="210.0" fitWidth="290.0" layoutX="44.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img_espaldas" fitHeight="172.0" fitWidth="221.0" layoutX="76.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img_enemigo" fitHeight="150.0" fitWidth="200.0" layoutX="434.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" />
+            <AnchorPane layoutX="50.0" layoutY="28.0" prefHeight="70.0" prefWidth="216.0" style="-fx-background-color: #F9FBD4; -fx-border-color: #41483F; -fx-border-width: 4; -fx-border-radius: 15 7 15 7; -fx-background-radius: 15 7 15 7;">
+               <children>
+                  <Label fx:id="name_enemigo_pokemon" layoutX="24.0" layoutY="14.0" prefHeight="17.0" prefWidth="54.0" text="Label">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Label>
+                  <Label fx:id="nivel_enemigo_pokemon" layoutX="160.0" layoutY="14.0" text="Label">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Label>
+                  <ImageView fitHeight="12.0" fitWidth="43.0" layoutX="44.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ps.PNG" />
+                     </image></ImageView>
+                  <ProgressBar fx:id="vida_actual_enemigo" layoutX="65.0" layoutY="41.0" prefHeight="12.0" prefWidth="179.0" progress="0.0" />
+                  <ImageView fx:id="img_sexo_enemigo" fitHeight="10.0" fitWidth="10.0" layoutX="101.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="434.0" layoutY="238.0" prefHeight="70.0" prefWidth="216.0" style="-fx-background-color: #F9FBD4; -fx-border-color: #41483F; -fx-border-width: 4; -fx-border-radius: 15 7 15 7; -fx-background-radius: 15 7 15 7;">
+               <children>
+                  <Label fx:id="name_pokemon" layoutX="23.0" layoutY="14.0" prefHeight="20.0" prefWidth="72.0" text="Label">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Label>
+                  <Label fx:id="nivel_pokemon" layoutX="160.0" layoutY="14.0" text="Label">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Label>
+                  <ImageView fitHeight="12.0" fitWidth="43.0" layoutX="43.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ps.PNG" />
+                     </image></ImageView>
+                  <ProgressBar fx:id="vida_actual" layoutX="64.0" layoutY="41.0" prefHeight="12.0" prefWidth="180.0" progress="0.0" />
+                  <ImageView fx:id="img_sexo" fitHeight="10.0" fitWidth="10.0" layoutX="117.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
    </center>
    <bottom>
-      <AnchorPane prefHeight="108.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="129.0" prefWidth="700.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="460.0" layoutY="3.0" prefHeight="124.0" prefWidth="236.0" style="-fx-background-color: #F9FBD4; -fx-border-color: #4472C4; -fx-border-radius: 7; -fx-border-width: 7; -fx-background-radius: 10;" />
+            <AnchorPane layoutX="4.0" layoutY="3.0" prefHeight="124.0" prefWidth="451.0" style="-fx-background-color: #F9FBD4; -fx-border-radius: 7; -fx-border-color: #4472C4; -fx-border-width: 7; -fx-background-radius: 10;" />
+         </children></AnchorPane>
    </bottom>
 </BorderPane>
