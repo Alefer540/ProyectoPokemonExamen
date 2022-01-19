@@ -9,21 +9,19 @@ import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
 
 public class Ventana1Controller {
 	int cont=0;
-	Pokemon x;
+	Pokemon xy;
 
 
-
+	ArrayList<Pokemon> ArraylistPokemon = new ArrayList();
 	Pokemon p1 = new Pokemon("Jolteon",204f,204f,"LV.65",new Image("https://static.wikia.nocookie.net/espokemon/images/5/58/Jolteon_NB.gif/revision/latest/scale-to-width-down/55?cb=20101102184202"),new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"),new Image("https://images.wikidexcdn.net/mwuploads/wikidex/0/08/latest/20150321174011/Jolteon_espalda_G6.gif"));
 	Pokemon p2 =new Pokemon ("Charizard",148f,148f,"LV.45",new Image("https://static.wikia.nocookie.net/espokemon/images/8/80/Charizard_NB.gif/revision/latest/scale-to-width-down/98?cb=20101031232142"),new Image("https://cdn-icons-png.flaticon.com/512/32/32353.png"), new Image("https://images.wikidexcdn.net/mwuploads/wikidex/4/42/latest/20101119123021/Charizard_espalda_G5.gif"));
 	Pokemon p3=new Pokemon("Vapereon",234f,234f,"LV.54",new Image("https://static.wikia.nocookie.net/espokemon/images/f/f9/Vaporeon_NB.gif/revision/latest/scale-to-width-down/59?cb=20101102184102"),new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"), new Image("https://images.wikidexcdn.net/mwuploads/wikidex/1/1a/latest/20101230113549/Vaporeon_espalda_G5.gif"));
@@ -129,6 +127,12 @@ public class Ventana1Controller {
 	private Ventana2controller v;
 	@FXML
 	public void initialize() {
+		ArraylistPokemon.add(p1);
+		ArraylistPokemon.add(p2);
+		ArraylistPokemon.add(p3);
+		ArraylistPokemon.add(p4);
+		ArraylistPokemon.add(p5);
+		ArraylistPokemon.add(p6);
 		Sexo1.setImage(p1.sexo);
 		Sexo2.setImage(p2.sexo);
 		Sexo3.setImage(p3.sexo);
@@ -179,7 +183,7 @@ public class Ventana1Controller {
 		Anchor1.setStyle("-fx-background-color:#675073");
 		img1.setStyle("-fx-opacity:1");
 		cont=1;
-		x = p1;
+		xy = p1;
 
 	}
 	@FXML
@@ -191,7 +195,7 @@ public class Ventana1Controller {
 		Anchor2.setStyle("-fx-background-color:#675073;");
 		img2.setStyle("-fx-opacity:1");
 		cont=1;
-		x = p2;
+		xy = p2;
 	}
 	@FXML
 	private void clickear3() {
@@ -201,7 +205,7 @@ public class Ventana1Controller {
 		boton_combate();
 		Anchor3.setStyle("-fx-background-color:#675073;");
 		img3.setStyle("-fx-opacity:1");
-		x = p3;
+		xy = p3;
 		cont=1;
 	}
 	@FXML
@@ -212,10 +216,8 @@ public class Ventana1Controller {
 		boton_combate();
 		Anchor4.setStyle("-fx-background-color:#675073;");
 		img4.setStyle("-fx-opacity:1");
-		boton_combate1.setDisable(false);
-		boton_combate1.setStyle("-fx-opacity:1");
 		cont=1;
-		x = p4;
+		xy = p4;
 	}
 	@FXML
 	private void clickear5() {
@@ -226,7 +228,7 @@ public class Ventana1Controller {
 		Anchor5.setStyle("-fx-background-color:#675073;");
 		img5.setStyle("-fx-opacity:1");
 		cont=1;
-		x = p5;
+		xy = p5;
 	}
 	@FXML
 	private void clickear6() {
@@ -237,7 +239,7 @@ public class Ventana1Controller {
 		Anchor6.setStyle("-fx-background-color: #675073;");
 		img6.setStyle("-fx-opacity:1");
 		cont=1;
-		x = p6;
+		xy = p6;
 	}
 	@FXML
 	public void pelea(){
@@ -254,7 +256,8 @@ public class Ventana1Controller {
 			stage2.show();
 
 			Ventana2controller v = loader.getController();
-			v.initialize(x);
+			v.funcioninicio(xy);
+			v.enviarController1(this);
 
 
 		} catch (IOException e) {
@@ -284,6 +287,11 @@ public class Ventana1Controller {
 	private void boton_combate(){
 		boton_combate1.setDisable(false);
 		boton_combate1.setStyle("-fx-opacity:1");
+	}
+	private void actualizar_pokemon(Pokemon x){
+		xy.vida_actual=x.vida_actual;
+
+		initialize();
 	}
 
 

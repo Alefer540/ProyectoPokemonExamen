@@ -32,12 +32,12 @@
                   <ProgressBar fx:id="progress1" layoutX="39.0" layoutY="150.0" prefHeight="11.0" prefWidth="171.0" progress="50.0" style="-fx-accent: #44e747;" />
                   <Label fx:id="l3Vida1" layoutX="10.0" layoutY="165.0" prefHeight="10.0" prefWidth="50.0" textFill="#f9f9fa">
                      <font>
-                        <Font name="Comic Sans MS" size="12.0" />
+                        <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
                   <Label fx:id="l1Nombre1" layoutX="20.0" layoutY="10.0" textFill="#f9f9fa">
                      <font>
-                        <Font name="Comic Sans MS" size="15.0" />
+                        <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
                   <ImageView fx:id="img1" fitHeight="100.0" fitWidth="100.0" layoutX="60.0" layoutY="35.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
@@ -47,7 +47,7 @@
                   </ImageView>
                   <Label fx:id="l2Nivel1" layoutX="170.0" layoutY="10.0" textFill="#f9f9fa">
                      <font>
-                        <Font name="Comic Sans MS" size="12.0" />
+                        <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
                   <ImageView fitHeight="16.0" fitWidth="20.0" layoutX="21.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
@@ -73,17 +73,17 @@
                   <ProgressBar fx:id="progress2" layoutX="39.0" layoutY="150.0" prefHeight="11.0" prefWidth="172.0" progress="0.0" style="-fx-accent: #44e747;" />
                   <Label fx:id="l6Vida2" layoutX="10.0" layoutY="165.0" prefHeight="10.0" prefWidth="50.0" textFill="#f9f9fa">
                      <font>
-                        <Font name="Comic Sans MS" size="12.0" />
+                        <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
                   <Label fx:id="l4Nombre2" layoutX="20.0" layoutY="10.0" textFill="#f9f9fa">
                      <font>
-                        <Font name="Comic Sans MS" size="15.0" />
+                        <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
                   <Label fx:id="l5Nivel2" layoutX="170.0" layoutY="10.0" textFill="#f9f9fa">
                      <font>
-                        <Font name="Comic Sans MS" size="12.0" />
+                        <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
                   <ImageView fitHeight="16.0" fitWidth="20.0" layoutX="21.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
@@ -109,17 +109,17 @@
                   <ProgressBar fx:id="progress4" layoutX="39.0" layoutY="150.0" prefHeight="11.0" prefWidth="171.0" progress="0.0" style="-fx-accent: #44e747;" />
                   <Label fx:id="l12Vida4" layoutX="10.0" layoutY="165.0" prefHeight="10.0" prefWidth="50.0" textFill="#f9f9fa">
                      <font>
-                        <Font name="Comic Sans MS" size="12.0" />
+                        <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
                   <Label fx:id="l10Nombre4" layoutX="20.0" layoutY="10.0" textFill="#f9f9fa">
                      <font>
-                        <Font name="Comic Sans MS" size="15.0" />
+                        <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
                   <Label fx:id="l11Nivel4" layoutX="170.0" layoutY="10.0" textFill="#f9f9fa">
                      <font>
-                        <Font name="Comic Sans MS" size="12.0" />
+                        <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
                   <ImageView fitHeight="16.0" fitWidth="20.0" layoutX="21.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
@@ -145,17 +145,17 @@
                   </ImageView>
                   <Label fx:id="l15Vida5" layoutX="10.0" layoutY="165.0" prefHeight="10.0" prefWidth="50.0" textFill="#f9f9fa">
                      <font>
-                        <Font name="Comic Sans MS" size="12.0" />
+                        <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
                   <Label fx:id="l13Nombre5" layoutX="20.0" layoutY="10.0" textFill="#f9f9fa">
                      <font>
-                        <Font name="Comic Sans MS" size="15.0" />
+                        <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
                   <Label fx:id="l14Nivel5" layoutX="170.0" layoutY="10.0" textFill="#f9f9fa">
                      <font>
-                        <Font name="Comic Sans MS" size="12.0" />
+                        <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
                   <ImageView fitHeight="16.0" fitWidth="20.0" layoutX="21.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
@@ -181,17 +181,17 @@
                   <ProgressBar fx:id="progress6" layoutX="39.0" layoutY="150.0" prefHeight="11.0" prefWidth="171.0" progress="0.0" style="-fx-accent: #44e747;" />
                   <Label fx:id="l18Vida6" layoutX="10.0" layoutY="165.0" prefHeight="10.0" prefWidth="50.0" textFill="#f9f9fa">
                      <font>
-                        <Font name="Comic Sans MS" size="12.0" />
+                        <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
                   <Label fx:id="l16Nombre6" layoutX="20.0" layoutY="10.0" textFill="#f9f9fa">
                      <font>
-                        <Font name="Comic Sans MS" size="15.0" />
+                        <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
                   <Label fx:id="l17Nivel6" layoutX="170.0" layoutY="10.0" textFill="#f9f9fa">
                      <font>
-                        <Font name="Comic Sans MS" size="12.0" />
+                        <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
                   <ImageView fitHeight="16.0" fitWidth="20.0" layoutX="21.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
@@ -216,18 +216,18 @@
                   </ImageView>
                   <Label fx:id="l9Vida3" layoutX="10.0" layoutY="165.0" prefHeight="10.0" prefWidth="50.0" textFill="#f9f9fa">
                      <font>
-                        <Font name="Comic Sans MS" size="12.0" />
+                        <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
                   <ProgressBar fx:id="progress3" layoutX="39.0" layoutY="150.0" prefHeight="11.0" prefWidth="171.0" progress="0.0" style="-fx-accent: #44e747;" />
                   <Label fx:id="l7Nombre3" layoutX="20.0" layoutY="10.0" textFill="#f9f9fa">
                      <font>
-                        <Font name="Comic Sans MS" size="15.0" />
+                        <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
                   <Label fx:id="l8Nivel3" layoutX="170.0" layoutY="10.0" textFill="#f9f9fa">
                      <font>
-                        <Font name="Comic Sans MS" size="12.0" />
+                        <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
                   <ImageView fitHeight="16.0" fitWidth="20.0" layoutX="21.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">

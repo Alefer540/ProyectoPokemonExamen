@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.image.Image?>
@@ -16,7 +17,7 @@
             <ImageView fx:id="img_enemigo" fitHeight="150.0" fitWidth="200.0" layoutX="434.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" />
             <AnchorPane layoutX="50.0" layoutY="28.0" prefHeight="70.0" prefWidth="216.0" style="-fx-background-color: #F9FBD4; -fx-border-color: #41483F; -fx-border-width: 4; -fx-border-radius: 15 7 15 7; -fx-background-radius: 15 7 15 7;">
                <children>
-                  <Label fx:id="name_enemigo_pokemon" layoutX="24.0" layoutY="14.0" prefHeight="17.0" prefWidth="54.0" text="Label">
+                  <Label fx:id="name_enemigo_pokemon" layoutX="51.0" layoutY="14.0" prefHeight="20.0" prefWidth="72.0" text="Label">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font></Label>
@@ -29,12 +30,12 @@
                         <Image url="@ps.PNG" />
                      </image></ImageView>
                   <ProgressBar fx:id="vida_actual_enemigo" layoutX="65.0" layoutY="41.0" prefHeight="12.0" prefWidth="179.0" progress="0.0" />
-                  <ImageView fx:id="img_sexo_enemigo" fitHeight="10.0" fitWidth="10.0" layoutX="101.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="img_sexo_enemigo" fitHeight="10.0" fitWidth="10.0" layoutX="34.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="434.0" layoutY="238.0" prefHeight="70.0" prefWidth="216.0" style="-fx-background-color: #F9FBD4; -fx-border-color: #41483F; -fx-border-width: 4; -fx-border-radius: 15 7 15 7; -fx-background-radius: 15 7 15 7;">
                <children>
-                  <Label fx:id="name_pokemon" layoutX="23.0" layoutY="14.0" prefHeight="20.0" prefWidth="72.0" text="Label">
+                  <Label fx:id="name_pokemon" layoutX="51.0" layoutY="14.0" prefHeight="20.0" prefWidth="72.0" text="Label">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font></Label>
@@ -46,8 +47,8 @@
                      <image>
                         <Image url="@ps.PNG" />
                      </image></ImageView>
-                  <ProgressBar fx:id="vida_actual" layoutX="64.0" layoutY="41.0" prefHeight="12.0" prefWidth="180.0" progress="0.0" />
-                  <ImageView fx:id="img_sexo" fitHeight="10.0" fitWidth="10.0" layoutX="117.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+                  <ProgressBar fx:id="pb_vida_actual" layoutX="64.0" layoutY="41.0" prefHeight="12.0" prefWidth="180.0" progress="0.0" />
+                  <ImageView fx:id="img_sexo" fitHeight="10.0" fitWidth="10.0" layoutX="34.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </AnchorPane>
          </children>
@@ -57,7 +58,39 @@
       <AnchorPane prefHeight="129.0" prefWidth="700.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
          <children>
             <AnchorPane layoutX="460.0" layoutY="3.0" prefHeight="124.0" prefWidth="236.0" style="-fx-background-color: #F9FBD4; -fx-border-color: #4472C4; -fx-border-radius: 7; -fx-border-width: 7; -fx-background-radius: 10;" />
-            <AnchorPane layoutX="4.0" layoutY="3.0" prefHeight="124.0" prefWidth="451.0" style="-fx-background-color: #F9FBD4; -fx-border-radius: 7; -fx-border-color: #4472C4; -fx-border-width: 7; -fx-background-radius: 10;" />
+            <AnchorPane layoutX="4.0" layoutY="3.0" prefHeight="124.0" prefWidth="451.0" style="-fx-background-color: #F9FBD4; -fx-border-radius: 7; -fx-border-color: #4472C4; -fx-border-width: 7; -fx-background-radius: 10;">
+               <children>
+                  <Button fx:id="ataque_seguro" layoutX="52.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#ataque" prefHeight="27.0" prefWidth="160.0" style="-fx-opacity: 0;" text="SEGURO" textAlignment="CENTER" textFill="#fcfcfc">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ataque_arriesgado" layoutX="263.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#ataque_arriesgado" prefWidth="160.0" style="-fx-opacity: 0;" text="ARRIESGADO" textAlignment="CENTER" textFill="#f8f8f8">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ataque_muy_arriesgado" layoutX="52.0" layoutY="70.0" mnemonicParsing="false" onMouseClicked="#ataque_muy_arriesgado" prefHeight="27.0" prefWidth="160.0" style="-fx-opacity: 0;" text="MUY ARRIESGADO" textFill="#fffdfd">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="cancelar_ataque" layoutX="264.0" layoutY="70.0" mnemonicParsing="false" onMouseClicked="#cancelar" prefHeight="27.0" prefWidth="160.0" style="-fx-opacity: 0;" text="CANCELAR" textFill="#fcfafa">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="luchar" graphicTextGap="0.0" layoutX="194.0" layoutY="10.0" lineSpacing="4.0" mnemonicParsing="false" onMouseClicked="#opcion_botones" style="-fx-background-color: #F8A9B1; -fx-border-color: #D43E41; -fx-border-radius: 20; -fx-border-width: 5; -fx-background-radius: 20;" text="LUCHAR" textAlignment="CENTER" textFill="#f8f8f8">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="curarse" layoutX="188.0" layoutY="70.0" mnemonicParsing="false" onMouseClicked="#curarse" prefHeight="41.0" prefWidth="102.0" style="-fx-background-radius: 20; -fx-border-width: 5; -fx-border-radius: 20; -fx-background-color: #2891C9; -fx-border-color: #3A668A;" text="CURARSE" textAlignment="CENTER" textFill="#fffefe">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
          </children></AnchorPane>
    </bottom>
 </BorderPane>
