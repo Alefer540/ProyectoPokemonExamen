@@ -56,20 +56,20 @@ public class Ventana2controller {
     Button curarse;
 
     Pokemon_enemigo oponente;
-    Pokemon x;
+    Pokemon Pokemon_amigo;
 
-    public void funcioninicio(Pokemon x) {
-        this.x = x;
-        img_espaldas.setImage(x.foto_detras);
-        name_pokemon.setText(x.nombre);
-        nivel_pokemon.setText(x.nivel);
-        img_sexo.setImage(x.sexo);
-        pb_vida_actual.setProgress(x.vida_actual/x.vida);
+    public void funcioninicio(Pokemon Pokemon_amigo) {
+        this.Pokemon_amigo = Pokemon_amigo;
         Pokemon_enemigos.add(p_e1);
         Pokemon_enemigos.add(p_e2);
         Pokemon_enemigos.add(p_e3);
         Pokemon_enemigos.add(p_e4);
         oponente = Pokemon_enemigos.get((int) (Math.random() * Pokemon_enemigos.size()));
+        img_espaldas.setImage(Pokemon_amigo.foto_detras);
+        name_pokemon.setText(Pokemon_amigo.nombre);
+        nivel_pokemon.setText(Pokemon_amigo.nivel);
+        img_sexo.setImage(Pokemon_amigo.sexo);
+        pb_vida_actual.setProgress(Pokemon_amigo.vida_actual/Pokemon_amigo.vida);
         img_enemigo.setImage(oponente.foto);
         name_enemigo_pokemon.setText(oponente.nombre);
         nivel_enemigo_pokemon.setText(oponente.nivel);
@@ -96,9 +96,15 @@ public class Ventana2controller {
     private  void ataque(){
         vida_actual_enemigo.setProgress((oponente.vida_actual-20)/oponente.vida);
         oponente.vida_actual -= 20;
-        System.out.println("CONTROL");
-        pb_vida_actual.setProgress((x.vida_actual-20)/x.vida);
-        x.vida_actual -=20;
+        System.out.println("Daño pokemon amigo arriesgado -20");
+        control_vida_enemigo();
+        pb_vida_actual.setProgress((Pokemon_amigo.vida_actual-20)/Pokemon_amigo.vida);
+        Pokemon_amigo.vida_actual -=20;
+        System.out.println("Daño pokemon amigo arriesgado -20");
+        ventana1Controller.actualizar_pokemon(Pokemon_amigo);
+        control_vida_amigo();
+
+
     }
     @FXML
     private  void ataque_arriesgado(){
@@ -106,10 +112,13 @@ public class Ventana2controller {
         vida_actual_enemigo.setProgress((oponente.vida_actual-i)/oponente.vida);
         oponente.vida_actual -= i ;
         System.out.println("Daño pokemon amigo arriesgado "+i);
+        control_vida_enemigo();
         int a = (int) (Math.random()*(26-11));
-        pb_vida_actual.setProgress((x.vida_actual-i)/x.vida);
-        x.vida_actual -=a;
+        pb_vida_actual.setProgress((Pokemon_amigo.vida_actual-i)/Pokemon_amigo.vida);
+        Pokemon_amigo.vida_actual -=a;
         System.out.println("Daño pokemon enemigo arriesgado "+i);
+        ventana1Controller.actualizar_pokemon(Pokemon_amigo);
+        control_vida_amigo();
 
     }
     @FXML
@@ -118,24 +127,24 @@ public class Ventana2controller {
         vida_actual_enemigo.setProgress((oponente.vida_actual-i)/oponente.vida);
         oponente.vida_actual -= i ;
         System.out.println("Daño pokemon amigo  ataque muy arriesgado "+i);
-        int a = (int) (Math.random()*(51-1));
-        pb_vida_actual.setProgress((x.vida_actual-i)/x.vida);
-        x.vida_actual -=a;
+        control_vida_enemigo();
+        i  = (int) (Math.random()*(51-1));
+        pb_vida_actual.setProgress((Pokemon_amigo.vida_actual-i)/Pokemon_amigo.vida);
+        Pokemon_amigo.vida_actual -=i;
         System.out.println("Daño pokemon enemigo ataque muy arriesgado "+i);
-        if(oponente.vida_actual>x.vida) {
-            x.vida_actual = x.vida;
-        }
+        ventana1Controller.actualizar_pokemon(Pokemon_amigo);
+        control_vida_amigo();
 
 
     }
     @FXML
     private void curarse() {
         int i = (int) (Math.random() * (76 - 26));
-        pb_vida_actual.setProgress((x.vida_actual + i) / x.vida);
-        x.vida_actual += i;
+        pb_vida_actual.setProgress((Pokemon_amigo.vida_actual + i) / Pokemon_amigo.vida);
+        Pokemon_amigo.vida_actual += i;
         System.out.println("pokemon se cura " + i);
-        if (x.vida_actual > x.vida) {
-            x.vida_actual = x.vida;
+        if (Pokemon_amigo.vida_actual > Pokemon_amigo.vida) {
+            Pokemon_amigo.vida_actual = Pokemon_amigo.vida;
         }
         int a = (int) (Math.random() * (76 - 26));
         vida_actual_enemigo.setProgress((oponente.vida_actual + i) / oponente.vida);
@@ -144,6 +153,7 @@ public class Ventana2controller {
         if (oponente.vida_actual > oponente.vida) {
             oponente.vida_actual = oponente.vida;
         }
+        ventana1Controller.actualizar_pokemon(Pokemon_amigo);
     }
 
 
@@ -177,36 +187,27 @@ public class Ventana2controller {
         ataque_arriesgado.setStyle("-fx-opacity:0;-fx-background-color: #DF982A; -fx-border-color: #896838; -fx-border-radius: 20; -fx-border-width: 5; -fx-background-radius: 20;");
         cancelar_ataque.setStyle("-fx-opacity:0;-fx-background-color: #DF982A; -fx-border-color: #896838; -fx-border-radius: 20; -fx-border-width: 5; -fx-background-radius: 20;");
     }
+    private void control_vida_amigo(){
+        if (Pokemon_amigo.vida_actual <= 0){
+            Pokemon_amigo.vida_actual = Float.valueOf(0);
+            ventana1Controller.actualizar_pokemon(Pokemon_amigo);
+            ventana1Controller.stage2.close();
+        }
+    }
+    private void control_vida_enemigo() {
+        if (oponente.vida_actual <= 0) {
+            ventana1Controller.actualizar_pokemon(Pokemon_amigo);
+            ventana1Controller.stage2.close();
+        }
+    }
 
     void enviarController1(Ventana1Controller Ventana1Controller) {
         this.ventana1Controller = Ventana1Controller;
-    }
-
-
-}
-
-
-
-
-
-class Pokemon_enemigo {
-    final String nombre;
-    final Float vida;
-    Float vida_actual;
-    final String nivel;
-    final Image sexo;
-    final Image foto;
-
-
-    Pokemon_enemigo(String nombre, Float vida, Float vida_actual, String nivel, Image foto, Image sexo) {
-        this.nombre = nombre;
-        this.vida = vida;
-        this.vida_actual = vida_actual;
-        this.nivel = nivel;
-        this.foto = foto;
-        this.sexo = sexo;
 
     }
+
+
+
 }
 
 

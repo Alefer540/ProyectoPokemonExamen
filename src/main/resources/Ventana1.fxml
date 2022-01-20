@@ -251,7 +251,7 @@
    <bottom>
       <AnchorPane fx:id="Anchor7" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #675073;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="boton_combate1" disable="true" layoutX="484.0" mnemonicParsing="false" onMouseClicked="#pelea" opacity="0.0" text="Salir.." />
+            <Button fx:id="boton_combate1" disable="true" layoutX="484.0" mnemonicParsing="false" onMouseClicked="#pelea" opacity="0.0" text="Continuar" />
             <Label graphicTextGap="20.0" layoutX="59.0" layoutY="4.0" text="ELIGE UN POKEMON..." textFill="#f9f9fa" textOverrun="CENTER_WORD_ELLIPSIS">
                <font>
                   <Font name="Comic Sans MS" size="13.0" />

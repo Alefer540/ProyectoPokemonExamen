@@ -17,17 +17,17 @@ import java.util.ArrayList;
 
 
 public class Ventana1Controller {
-	int cont=0;
-	Pokemon xy;
+	int cont = 0;
+	Pokemon pokemon_amigo;
 
 
 	ArrayList<Pokemon> ArraylistPokemon = new ArrayList();
-	Pokemon p1 = new Pokemon("Jolteon",204f,204f,"LV.65",new Image("https://static.wikia.nocookie.net/espokemon/images/5/58/Jolteon_NB.gif/revision/latest/scale-to-width-down/55?cb=20101102184202"),new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"),new Image("https://images.wikidexcdn.net/mwuploads/wikidex/0/08/latest/20150321174011/Jolteon_espalda_G6.gif"));
-	Pokemon p2 =new Pokemon ("Charizard",148f,148f,"LV.45",new Image("https://static.wikia.nocookie.net/espokemon/images/8/80/Charizard_NB.gif/revision/latest/scale-to-width-down/98?cb=20101031232142"),new Image("https://cdn-icons-png.flaticon.com/512/32/32353.png"), new Image("https://images.wikidexcdn.net/mwuploads/wikidex/4/42/latest/20101119123021/Charizard_espalda_G5.gif"));
-	Pokemon p3=new Pokemon("Vapereon",234f,234f,"LV.54",new Image("https://static.wikia.nocookie.net/espokemon/images/f/f9/Vaporeon_NB.gif/revision/latest/scale-to-width-down/59?cb=20101102184102"),new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"), new Image("https://images.wikidexcdn.net/mwuploads/wikidex/1/1a/latest/20101230113549/Vaporeon_espalda_G5.gif"));
-	Pokemon p5=new Pokemon("Pikachu",222f,222f,"LV.65",new Image("https://static.wikia.nocookie.net/espokemon/images/1/19/Pikachu_NB.gif/revision/latest/scale-to-width-down/63?cb=20101031232752"),new Image( "https://cdn-icons-png.flaticon.com/512/32/32353.png"),new Image("https://images.wikidexcdn.net/mwuploads/wikidex/4/44/latest/20101101164123/Pikachu_espalda_G5.gif"));
-	Pokemon p4=new Pokemon("Mewtwo",298f,298f,"LV.75",new Image("https://static.wikia.nocookie.net/espokemon/images/8/83/Mewtwo_NB.gif/revision/latest/scale-to-width-down/100?cb=20101105165130"),new Image("https://cdn-icons-png.flaticon.com/512/32/32353.png"),new Image("https://images.wikidexcdn.net/mwuploads/wikidex/9/9a/latest/20101210174929/Mewtwo_espalda_G5.gif"));
-	Pokemon p6=new Pokemon("Butterfree",160f,160f,"LV.54", new Image("https://static.wikia.nocookie.net/espokemon/images/e/ed/Butterfree_NB_hembra.gif/revision/latest/scale-to-width-down/63?cb=20110106222132"),new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"),new Image("https://images.wikidexcdn.net/mwuploads/wikidex/2/28/latest/20110107052640/Butterfree_espalda_G5_hembra.gif"));
+	Pokemon p1 = new Pokemon(1, "Jolteon", 204f, 204f, "LV.65", new Image("https://static.wikia.nocookie.net/espokemon/images/5/58/Jolteon_NB.gif/revision/latest/scale-to-width-down/55?cb=20101102184202"), new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"), new Image("https://images.wikidexcdn.net/mwuploads/wikidex/0/08/latest/20150321174011/Jolteon_espalda_G6.gif"));
+	Pokemon p2 = new Pokemon(2, "Charizard", 148f, 148f, "LV.45", new Image("https://static.wikia.nocookie.net/espokemon/images/8/80/Charizard_NB.gif/revision/latest/scale-to-width-down/98?cb=20101031232142"), new Image("https://cdn-icons-png.flaticon.com/512/32/32353.png"), new Image("https://images.wikidexcdn.net/mwuploads/wikidex/4/42/latest/20101119123021/Charizard_espalda_G5.gif"));
+	Pokemon p3 = new Pokemon(3, "Vapereon", 234f, 234f, "LV.54", new Image("https://static.wikia.nocookie.net/espokemon/images/f/f9/Vaporeon_NB.gif/revision/latest/scale-to-width-down/59?cb=20101102184102"), new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"), new Image("https://images.wikidexcdn.net/mwuploads/wikidex/1/1a/latest/20101230113549/Vaporeon_espalda_G5.gif"));
+	Pokemon p5 = new Pokemon(4, "Pikachu", 222f, 222f, "LV.65", new Image("https://static.wikia.nocookie.net/espokemon/images/1/19/Pikachu_NB.gif/revision/latest/scale-to-width-down/63?cb=20101031232752"), new Image("https://cdn-icons-png.flaticon.com/512/32/32353.png"), new Image("https://images.wikidexcdn.net/mwuploads/wikidex/4/44/latest/20101101164123/Pikachu_espalda_G5.gif"));
+	Pokemon p4 = new Pokemon(5, "Mewtwo", 298f, 298f, "LV.75", new Image("https://static.wikia.nocookie.net/espokemon/images/8/83/Mewtwo_NB.gif/revision/latest/scale-to-width-down/100?cb=20101105165130"), new Image("https://cdn-icons-png.flaticon.com/512/32/32353.png"), new Image("https://images.wikidexcdn.net/mwuploads/wikidex/9/9a/latest/20101210174929/Mewtwo_espalda_G5.gif"));
+	Pokemon p6 = new Pokemon(6, "Butterfree", 160f, 160f, "LV.54", new Image("https://static.wikia.nocookie.net/espokemon/images/e/ed/Butterfree_NB_hembra.gif/revision/latest/scale-to-width-down/63?cb=20110106222132"), new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"), new Image("https://images.wikidexcdn.net/mwuploads/wikidex/2/28/latest/20110107052640/Butterfree_espalda_G5_hembra.gif"));
 
 	//POKEMON 1
 	@FXML
@@ -120,11 +120,12 @@ public class Ventana1Controller {
 	@FXML
 	ProgressBar progress6;
 	//boton siguiente pagina
-    @FXML
+	@FXML
 	Button boton_combate1;
 
 
 	private Ventana2controller v;
+
 	@FXML
 	public void initialize() {
 		ArraylistPokemon.add(p1);
@@ -140,35 +141,35 @@ public class Ventana1Controller {
 		Sexo5.setImage(p5.sexo);
 		Sexo6.setImage(p6.sexo);
 		l1Nombre1.setText(p1.nombre);
-		l2Nivel1.setText(""+p1.nivel);
-		l3Vida1.setText(""+p1.vida);
+		l2Nivel1.setText("" + p1.nivel);
+		l3Vida1.setText("" + p1.vida_actual);
 		l4Nombre2.setText(p2.nombre);
-		l5Nivel2.setText(""+p2.nivel);
-		l6Vida2.setText(""+p2.vida);
+		l5Nivel2.setText("" + p2.nivel);
+		l6Vida2.setText("" + p2.vida_actual);
 		l7Nombre3.setText(p3.nombre);
-		l8Nivel3.setText(""+p3.nivel);
-		l9Vida3.setText(""+p3.vida);
+		l8Nivel3.setText("" + p3.nivel);
+		l9Vida3.setText("" + p3.vida_actual);
 		l10Nombre4.setText(p4.nombre);
-		l11Nivel4.setText(""+p4.nivel);
-		l12Vida4.setText(""+p4.vida);
+		l11Nivel4.setText("" + p4.nivel);
+		l12Vida4.setText("" + p4.vida_actual);
 		l13Nombre5.setText(p5.nombre);
-		l14Nivel5.setText(""+p5.nivel);
-		l15Vida5.setText(""+p5.vida);
+		l14Nivel5.setText("" + p5.nivel);
+		l15Vida5.setText("" + p5.vida_actual);
 		l16Nombre6.setText(p6.nombre);
-		l17Nivel6.setText(""+p6.nivel);
-		l18Vida6.setText(""+p6.vida);
+		l17Nivel6.setText("" + p6.nivel);
+		l18Vida6.setText("" + p6.vida_actual);
 		img1.setImage(p1.foto);
 		img2.setImage(p2.foto);
 		img3.setImage(p3.foto);
 		img4.setImage(p4.foto);
 		img5.setImage(p5.foto);
 		img6.setImage(p6.foto);
-		progress1.setProgress(p1.vida_actual/p1.vida);
-		progress2.setProgress(p2.vida_actual/p2.vida);
-		progress3.setProgress(p3.vida_actual/p3.vida);
-		progress4.setProgress(p4.vida_actual/p4.vida);
-		progress5.setProgress(p5.vida_actual/p5.vida);
-		progress6.setProgress(p6.vida_actual/p6.vida);
+		progress1.setProgress(p1.vida_actual / p1.vida);
+		progress2.setProgress(p2.vida_actual / p2.vida);
+		progress3.setProgress(p3.vida_actual / p3.vida);
+		progress4.setProgress(p4.vida_actual / p4.vida);
+		progress5.setProgress(p5.vida_actual / p5.vida);
+		progress6.setProgress(p6.vida_actual / p6.vida);
 		boton_combate1.setDisable(true);
 
 
@@ -182,10 +183,11 @@ public class Ventana1Controller {
 		boton_combate();
 		Anchor1.setStyle("-fx-background-color:#675073");
 		img1.setStyle("-fx-opacity:1");
-		cont=1;
-		xy = p1;
+		cont = 1;
+		pokemon_amigo = p1;
 
 	}
+
 	@FXML
 	private void clickear2() {
 		System.out.println("anchor pulsado");
@@ -194,9 +196,10 @@ public class Ventana1Controller {
 		boton_combate();
 		Anchor2.setStyle("-fx-background-color:#675073;");
 		img2.setStyle("-fx-opacity:1");
-		cont=1;
-		xy = p2;
+		cont = 1;
+		pokemon_amigo = p2;
 	}
+
 	@FXML
 	private void clickear3() {
 		System.out.println("anchor pulsado");
@@ -205,9 +208,10 @@ public class Ventana1Controller {
 		boton_combate();
 		Anchor3.setStyle("-fx-background-color:#675073;");
 		img3.setStyle("-fx-opacity:1");
-		xy = p3;
-		cont=1;
+		pokemon_amigo = p3;
+		cont = 1;
 	}
+
 	@FXML
 	private void clickear4() {
 		System.out.println("anchor pulsado");
@@ -216,9 +220,10 @@ public class Ventana1Controller {
 		boton_combate();
 		Anchor4.setStyle("-fx-background-color:#675073;");
 		img4.setStyle("-fx-opacity:1");
-		cont=1;
-		xy = p4;
+		cont = 1;
+		pokemon_amigo = p4;
 	}
+
 	@FXML
 	private void clickear5() {
 		System.out.println("anchor pulsado");
@@ -227,9 +232,10 @@ public class Ventana1Controller {
 		boton_combate();
 		Anchor5.setStyle("-fx-background-color:#675073;");
 		img5.setStyle("-fx-opacity:1");
-		cont=1;
-		xy = p5;
+		cont = 1;
+		pokemon_amigo = p5;
 	}
+
 	@FXML
 	private void clickear6() {
 		System.out.println("anchor pulsado");
@@ -238,25 +244,28 @@ public class Ventana1Controller {
 		boton_combate();
 		Anchor6.setStyle("-fx-background-color: #675073;");
 		img6.setStyle("-fx-opacity:1");
-		cont=1;
-		xy = p6;
+		cont = 1;
+		pokemon_amigo = p6;
 	}
+
+	Stage stage2;
+
 	@FXML
-	public void pelea(){
+	public void pelea() {
 		System.out.println("Boton pulsado pasamos al siguiente escenario");
 		try {
 
-			Stage stage2 = new Stage();
+			stage2 = new Stage();
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/ventana2.fxml"));
 
-			BorderPane root =  loader.load();
+			BorderPane root = loader.load();
 			Scene scene = new Scene(root, 700, 450);
 
 			stage2.setScene(scene);
 			stage2.show();
 
 			Ventana2controller v = loader.getController();
-			v.funcioninicio(xy);
+			v.funcioninicio(pokemon_amigo);
 			v.enviarController1(this);
 
 
@@ -267,7 +276,7 @@ public class Ventana1Controller {
 	}
 
 
-	private void desclick(){
+	private void desclick() {
 		Anchor6.setStyle("-fx-background-color: #7D6A87;");
 		Anchor1.setStyle("-fx-background-color: #7D6A87;");
 		Anchor2.setStyle("-fx-background-color: #7D6A87;");
@@ -276,7 +285,8 @@ public class Ventana1Controller {
 		Anchor5.setStyle("-fx-background-color: #7D6A87;;");
 
 	}
-	private void opacity(){
+
+	private void opacity() {
 		img1.setStyle("-fx-opacity:0.5");
 		img2.setStyle("-fx-opacity:0.5");
 		img3.setStyle("-fx-opacity:0.5");
@@ -284,35 +294,15 @@ public class Ventana1Controller {
 		img5.setStyle("-fx-opacity:0.5");
 		img6.setStyle("-fx-opacity:0.5");
 	}
-	private void boton_combate(){
+
+	private void boton_combate() {
 		boton_combate1.setDisable(false);
 		boton_combate1.setStyle("-fx-opacity:1");
 	}
-	private void actualizar_pokemon(Pokemon x){
-		xy.vida_actual=x.vida_actual;
 
+	public void actualizar_pokemon(Pokemon pokemon_amigo) {
+		ArraylistPokemon.set(pokemon_amigo.getIndex(), pokemon_amigo);
 		initialize();
-	}
-
-
-}
-class Pokemon{
-	String nombre;
-	Float vida;
-	Float vida_actual;
-	String nivel;
-	Image sexo;
-	Image foto;
-	Image foto_detras;
-
-	Pokemon(String nombre,Float vida,Float vida_actual,String nivel,Image foto,Image sexo,Image foto_detras){
-		this.nombre=nombre;
-		this.vida=vida;
-		this.vida_actual=vida_actual;
-		this.nivel=nivel;
-		this.foto=foto;
-		this.sexo=sexo;
-		this.foto_detras=foto_detras;
 	}
 
 
