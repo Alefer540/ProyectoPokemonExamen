@@ -1,16 +1,13 @@
 package sample;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ProgressBar;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 
 import java.util.ArrayList;
-
-
+import java.util.Optional;
 
 
 public class Ventana2controller {
@@ -79,6 +76,7 @@ public class Ventana2controller {
         ataque_muy_arriesgado.setDisable(true);
         cancelar_ataque.setDisable(true);
         ataque_seguro.setDisable(true);
+
     }
     private Ventana1Controller ventana1Controller;
 
@@ -190,22 +188,66 @@ public class Ventana2controller {
     private void control_vida_amigo(){
         if (Pokemon_amigo.vida_actual <= 0){
             Pokemon_amigo.vida_actual = Float.valueOf(0);
-            ventana1Controller.actualizar_pokemon(Pokemon_amigo);
-            ventana1Controller.stage2.close();
+            showAlert(alert(Pokemon_amigo));
+
         }
     }
-    private void control_vida_enemigo() {
+   private void control_vida_enemigo() {
         if (oponente.vida_actual <= 0) {
-            ventana1Controller.actualizar_pokemon(Pokemon_amigo);
-            ventana1Controller.stage2.close();
+            oponente.vida_actual = Float.valueOf(0);
+            showAlert2(alert_enemigo(oponente));
         }
     }
+    private void showAlert(Alert alert) {
+        Optional<ButtonType> decission = alert.showAndWait();
+        if (decission.get() == ButtonType.NO) {
+            System.exit(0);
+        } else {
+            ventana1Controller.stage2.close();
+            ventana1Controller.actualizar_pokemon(Pokemon_amigo);
+        }
+    }
+    private void showAlert2(Alert alert_enemigo){
+        Optional<ButtonType> decission =alert_enemigo.showAndWait();
+        if(decission.get() == ButtonType.NO){
+            System.exit(0);
+        }else{
+            ventana1Controller.stage2.close();
+            ventana1Controller.actualizar_pokemon(Pokemon_amigo);
+        }
+    }
+
+
+
+
+
+
+    public Alert alert(Pokemon pokemon_amigo){
+        Alert alert=new Alert(Alert.AlertType.NONE);
+        alert.setHeaderText(null);
+        alert.setContentText(pokemon_amigo.nombre+"\n ha perdido \n Elegir otro pokemon pulse SI \n Salir del programa NO");
+        alert.setTitle("Choose an option");
+        alert.setGraphic(new ImageView(pokemon_amigo.foto));
+        alert.getDialogPane().getButtonTypes().addAll(ButtonType.YES,ButtonType.NO);
+        return alert;
+
+    }
+    public Alert alert_enemigo(Pokemon_enemigo oponentes){
+        Alert alert=new Alert(Alert.AlertType.NONE);
+        alert.setHeaderText(null);
+        alert.setContentText("tu pokemon ha derrotado a: \n"+oponentes.nombre+" \n Elegir otro pokemon pulse SI \n Salir del programa NO");
+        alert.setTitle("Choose an option");
+        alert.setGraphic(new ImageView(oponentes.foto));
+        alert.getDialogPane().getButtonTypes().addAll(ButtonType.YES,ButtonType.NO);
+        return alert;
+
+    }
+
 
     void enviarController1(Ventana1Controller Ventana1Controller) {
         this.ventana1Controller = Ventana1Controller;
 
     }
-
 
 
 }
