@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 
 
 import java.util.ArrayList;
@@ -51,6 +52,11 @@ public class Ventana2controller {
     Button luchar;
     @FXML
     Button curarse;
+    @FXML
+            Label ps;
+    @FXML
+    Label ps1;
+
 
     Pokemon_enemigo oponente;
     Pokemon Pokemon_amigo;
@@ -90,6 +96,26 @@ public class Ventana2controller {
         curarse.setStyle("-fx-opacity:0");
 
     }
+    @FXML
+    private void cambiovida(){
+        ps.setText(""+oponente.vida_actual);
+
+    }
+    @FXML
+    private void cambiovida2(){
+        ps1.setText(""+Pokemon_amigo.vida_actual);
+
+    }
+    @FXML
+    private void ps1(){
+        ps1.setText("PS");
+
+    }
+    @FXML
+    private void ps() {
+        ps.setText("PS");
+    }
+
     @FXML
     private  void ataque(){
         vida_actual_enemigo.setProgress((oponente.vida_actual-20)/oponente.vida);
@@ -164,6 +190,7 @@ public class Ventana2controller {
         luchar.setStyle("-fx-opacity:1;-fx-background-color: #F8A9B1; -fx-border-color: #D43E41; -fx-border-radius: 20; -fx-border-width: 5; -fx-background-radius: 20;");
         curarse.setStyle("-fx-opacity:1;-fx-background-radius: 20; -fx-border-width: 5; -fx-border-radius: 20; -fx-background-color: #2891C9; -fx-border-color: #3A668A;");
     }
+
 
     private void aparecer_botones_ataques(){
         ataque_muy_arriesgado.setDisable(false);
@@ -248,6 +275,7 @@ public class Ventana2controller {
         this.ventana1Controller = Ventana1Controller;
 
     }
+
 
 
 }

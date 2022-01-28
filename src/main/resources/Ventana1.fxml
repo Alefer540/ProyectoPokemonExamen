@@ -254,7 +254,7 @@
             <Button fx:id="boton_combate1" disable="true" layoutX="484.0" mnemonicParsing="false" onMouseClicked="#pelea" opacity="0.0" text="Continuar" />
             <Label graphicTextGap="20.0" layoutX="59.0" layoutY="4.0" text="ELIGE UN POKEMON..." textFill="#f9f9fa" textOverrun="CENTER_WORD_ELLIPSIS">
                <font>
-                  <Font name="Comic Sans MS" size="13.0" />
+                  <Font name="Arial Bold" size="15.0" />
                </font></Label>
          </children></AnchorPane>
    </bottom>
