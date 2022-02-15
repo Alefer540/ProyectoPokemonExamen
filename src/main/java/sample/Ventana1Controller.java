@@ -122,6 +122,8 @@ public class Ventana1Controller {
 	//boton siguiente pagina
 	@FXML
 	Button boton_combate1;
+	@FXML
+	Button boton_estadisticas;
 
 
 	private Ventana2controller v;
@@ -171,6 +173,7 @@ public class Ventana1Controller {
 		progress5.setProgress(p5.vida_actual / p5.vida);
 		progress6.setProgress(p6.vida_actual / p6.vida);
 		boton_combate1.setDisable(true);
+
 
 
 	}
@@ -249,6 +252,7 @@ public class Ventana1Controller {
 	}
 
 	Stage stage2;
+	Stage stage3;
 
 	@FXML
 	public void pelea() {
@@ -274,8 +278,31 @@ public class Ventana1Controller {
 		}
 
 	}
+	@FXML
+	public void estadisticas() {
+		System.out.println("Boton pulsado pasamos al siguiente escenario");
+		try {
+
+			stage3 = new Stage();
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/ventana3.fxml"));
+
+			BorderPane root = loader.load();
+			Scene scene = new Scene(root, 700, 450);
+
+			stage3.setScene(scene);
+			stage3.show();
+
+			Ventana3controller v = loader.getController();
+			v.funcioninicio(pokemon_amigo);
 
 
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+	@FXML
 	private void desclick() {
 		Anchor6.setStyle("-fx-background-color: #7D6A87;");
 		Anchor1.setStyle("-fx-background-color: #7D6A87;");
