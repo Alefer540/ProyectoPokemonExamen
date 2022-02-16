@@ -25,27 +25,44 @@ public class Ventana3controller {
 
 
     public void datosGraficoBarras(int cont_p1, int cont_p2, int cont_p3, int cont_p4, int cont_p5, int cont_p6) { String Jolteon = "Jolteon";
-         String Charizard = "Charizard";
-         String Vaporeon = "Vaporeon";
-         String Pikachu = "Pikachu";
-         String Mewtwo = "Mewtwo";
-         String Butterfree = "Butterfree";
+
 
          CategoryAxis xAxis = new CategoryAxis();
+         NumberAxis yAxis = new NumberAxis();
+         xAxis.setLabel("Pokemon");
+         yAxis.setLabel("Veces");
 
-        graficoBarras.setTitle("veces seleccionado");
-        xAxis.setLabel("Pokemon");
+        graficoBarras.setTitle("Veces Seleccionado");
+
         XYChart.Series series1 = new XYChart.Series();
-       ;
-        series1.getData().add(new XYChart.Data(Jolteon, cont_p1));
-        series1.getData().add(new XYChart.Data(Charizard, cont_p2));
-        series1.getData().add(new XYChart.Data(Vaporeon, cont_p3));
-        series1.getData().add(new XYChart.Data(Pikachu, cont_p4));
-        series1.getData().add(new XYChart.Data(Mewtwo, cont_p5));
-        series1.getData().add(new XYChart.Data(Butterfree, cont_p6));
+        series1.setName("Jolteon");
+        series1.getData().add(new XYChart.Data("", cont_p1));
 
-        graficoBarras.getData().add(series1);
-        graficoBarras.setCategoryGap(20);
+        XYChart.Series series2 = new XYChart.Series();
+        series2.setName("Charizard");
+        series2.getData().add(new XYChart.Data("", cont_p2));
+
+        XYChart.Series series3 = new XYChart.Series();
+        series3.setName("Vaporeon");
+        series3.getData().add(new XYChart.Data("", cont_p3));
+
+        XYChart.Series series4 = new XYChart.Series();
+        series4.setName("Pikachu");
+        series4.getData().add(new XYChart.Data("", cont_p4));
+
+        XYChart.Series series5 = new XYChart.Series();
+        series5.setName("Mewtwo");
+        series5.getData().add(new XYChart.Data("", cont_p5));
+
+        XYChart.Series series6 = new XYChart.Series();
+        series6.setName("Butterfree");
+        series6.getData().add(new XYChart.Data("", cont_p6));
+
+
+        graficoBarras.setCategoryGap(0);
+        graficoBarras.getData().addAll(series1,series2,series3,series4,series5,series6);
+
+
 
 
     }

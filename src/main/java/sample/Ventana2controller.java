@@ -141,9 +141,9 @@ public class Ventana2controller {
         System.out.println("Daño pokemon amigo arriesgado "+i);
         Ventana1Controller.danorecibido += i;
         control_vida_enemigo();
-        int a = (int) (Math.random()*(26-11));
+         i = (int) (Math.random()*(26-11));
         pb_vida_actual.setProgress((Pokemon_amigo.vida_actual-i)/Pokemon_amigo.vida);
-        Pokemon_amigo.vida_actual -=a;
+        Pokemon_amigo.vida_actual -= i;
         System.out.println("Daño pokemon enemigo arriesgado "+i);
         ventana1Controller.actualizar_pokemon(Pokemon_amigo);
         Ventana1Controller.danodado += i;
