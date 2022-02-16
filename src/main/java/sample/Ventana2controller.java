@@ -63,6 +63,7 @@ public class Ventana2controller {
 
     public void funcioninicio(Pokemon Pokemon_amigo) {
         this.Pokemon_amigo = Pokemon_amigo;
+        contador();
         Pokemon_enemigos.add(p_e1);
         Pokemon_enemigos.add(p_e2);
         Pokemon_enemigos.add(p_e3);
@@ -121,11 +122,13 @@ public class Ventana2controller {
         vida_actual_enemigo.setProgress((oponente.vida_actual-20)/oponente.vida);
         oponente.vida_actual -= 20;
         System.out.println("Daño pokemon amigo arriesgado -20");
+        Ventana1Controller.danorecibido += 20;
         control_vida_enemigo();
         pb_vida_actual.setProgress((Pokemon_amigo.vida_actual-20)/Pokemon_amigo.vida);
         Pokemon_amigo.vida_actual -=20;
         System.out.println("Daño pokemon amigo arriesgado -20");
         ventana1Controller.actualizar_pokemon(Pokemon_amigo);
+        Ventana1Controller.danodado += 20;
         control_vida_amigo();
 
 
@@ -136,12 +139,14 @@ public class Ventana2controller {
         vida_actual_enemigo.setProgress((oponente.vida_actual-i)/oponente.vida);
         oponente.vida_actual -= i ;
         System.out.println("Daño pokemon amigo arriesgado "+i);
+        Ventana1Controller.danorecibido += i;
         control_vida_enemigo();
         int a = (int) (Math.random()*(26-11));
         pb_vida_actual.setProgress((Pokemon_amigo.vida_actual-i)/Pokemon_amigo.vida);
         Pokemon_amigo.vida_actual -=a;
         System.out.println("Daño pokemon enemigo arriesgado "+i);
         ventana1Controller.actualizar_pokemon(Pokemon_amigo);
+        Ventana1Controller.danodado += i;
         control_vida_amigo();
 
     }
@@ -151,12 +156,14 @@ public class Ventana2controller {
         vida_actual_enemigo.setProgress((oponente.vida_actual-i)/oponente.vida);
         oponente.vida_actual -= i ;
         System.out.println("Daño pokemon amigo  ataque muy arriesgado "+i);
+        Ventana1Controller.danorecibido += i;
         control_vida_enemigo();
         i  = (int) (Math.random()*(51-1));
         pb_vida_actual.setProgress((Pokemon_amigo.vida_actual-i)/Pokemon_amigo.vida);
         Pokemon_amigo.vida_actual -=i;
         System.out.println("Daño pokemon enemigo ataque muy arriesgado "+i);
         ventana1Controller.actualizar_pokemon(Pokemon_amigo);
+        Ventana1Controller.danodado += i;
         control_vida_amigo();
 
 
@@ -243,11 +250,26 @@ public class Ventana2controller {
             ventana1Controller.actualizar_pokemon(Pokemon_amigo);
         }
     }
-
-
-
-
-
+    private void contador() {
+        if (Pokemon_amigo.index == 1) {
+            Ventana1Controller.cont_p1++;
+        }
+        if (Pokemon_amigo.index == 2) {
+            Ventana1Controller.cont_p2++;
+        }
+        if (Pokemon_amigo.index == 3) {
+            Ventana1Controller.cont_p3++;
+        }
+        if (Pokemon_amigo.index == 4) {
+            Ventana1Controller.cont_p4++;
+        }
+        if (Pokemon_amigo.index == 5) {
+            Ventana1Controller.cont_p5++;
+        }
+        if (Pokemon_amigo.index == 6) {
+            Ventana1Controller.cont_p6++;
+        }
+    }
 
     public Alert alert(Pokemon pokemon_amigo){
         Alert alert=new Alert(Alert.AlertType.NONE);
@@ -275,6 +297,7 @@ public class Ventana2controller {
         this.ventana1Controller = Ventana1Controller;
 
     }
+
 
 
 

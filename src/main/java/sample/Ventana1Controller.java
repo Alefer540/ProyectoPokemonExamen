@@ -19,6 +19,17 @@ import java.util.ArrayList;
 public class Ventana1Controller {
 	int cont = 0;
 	Pokemon pokemon_amigo;
+	public static int danorecibido=0;
+	public static int danodado=0;
+	public static int cont_p1=0;
+	public static int cont_p2=0;
+	public static int cont_p3=0;
+	public static int cont_p4=0;
+	public static int cont_p5=0;
+	public static int cont_p6=0;
+
+
+
 
 
 	ArrayList<Pokemon> ArraylistPokemon = new ArrayList();
@@ -293,7 +304,9 @@ public class Ventana1Controller {
 			stage3.show();
 
 			Ventana3controller v = loader.getController();
-			v.funcioninicio(pokemon_amigo);
+			v.datosPiechart(danodado,danorecibido);
+			v.datosGraficoBarras(cont_p1,cont_p2,cont_p3,cont_p4,cont_p5,cont_p6);
+
 
 
 
