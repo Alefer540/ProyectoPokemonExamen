@@ -58,7 +58,7 @@ public class Ventana3controller {
         series6.setName("Butterfree");
         series6.getData().add(new XYChart.Data("", cont_p6));
 
-
+        graficoBarras.setAnimated(false);
         graficoBarras.setCategoryGap(0);
         graficoBarras.getData().addAll(series1,series2,series3,series4,series5,series6);
 

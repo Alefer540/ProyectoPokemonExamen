@@ -2,6 +2,8 @@ package sample;
 
 import javafx.scene.image.Image;
 
+import java.io.File;
+
 public class Pokemon{
     int index;
     String nombre;
@@ -9,10 +11,10 @@ public class Pokemon{
     Float vida_actual;
     String nivel;
     Image sexo;
-    Image foto;
-    Image foto_detras;
+    File foto;
+    File foto_detras;
 
-    Pokemon(int index,String nombre,Float vida,Float vida_actual,String nivel,Image foto,Image sexo,Image foto_detras){
+    Pokemon(int index, String nombre, Float vida, Float vida_actual, String nivel, File foto, Image sexo, File foto_detras){
         this.index = index;
         this.nombre=nombre;
         this.vida=vida;

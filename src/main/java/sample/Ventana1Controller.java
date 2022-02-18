@@ -12,6 +12,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -33,12 +34,12 @@ public class Ventana1Controller {
 
 
 	ArrayList<Pokemon> ArraylistPokemon = new ArrayList();
-	Pokemon p1 = new Pokemon(1, "Jolteon", 204f, 204f, "LV.65", new Image("https://static.wikia.nocookie.net/espokemon/images/5/58/Jolteon_NB.gif/revision/latest/scale-to-width-down/55?cb=20101102184202"), new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"), new Image("https://images.wikidexcdn.net/mwuploads/wikidex/0/08/latest/20150321174011/Jolteon_espalda_G6.gif"));
-	Pokemon p2 = new Pokemon(2, "Charizard", 148f, 148f, "LV.45", new Image("https://static.wikia.nocookie.net/espokemon/images/8/80/Charizard_NB.gif/revision/latest/scale-to-width-down/98?cb=20101031232142"), new Image("https://cdn-icons-png.flaticon.com/512/32/32353.png"), new Image("https://images.wikidexcdn.net/mwuploads/wikidex/4/42/latest/20101119123021/Charizard_espalda_G5.gif"));
-	Pokemon p3 = new Pokemon(3, "Vapereon", 234f, 234f, "LV.54", new Image("https://static.wikia.nocookie.net/espokemon/images/f/f9/Vaporeon_NB.gif/revision/latest/scale-to-width-down/59?cb=20101102184102"), new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"), new Image("https://images.wikidexcdn.net/mwuploads/wikidex/1/1a/latest/20101230113549/Vaporeon_espalda_G5.gif"));
-	Pokemon p5 = new Pokemon(4, "Pikachu", 222f, 222f, "LV.65", new Image("https://static.wikia.nocookie.net/espokemon/images/1/19/Pikachu_NB.gif/revision/latest/scale-to-width-down/63?cb=20101031232752"), new Image("https://cdn-icons-png.flaticon.com/512/32/32353.png"), new Image("https://images.wikidexcdn.net/mwuploads/wikidex/4/44/latest/20101101164123/Pikachu_espalda_G5.gif"));
-	Pokemon p4 = new Pokemon(5, "Mewtwo", 298f, 298f, "LV.75", new Image("https://static.wikia.nocookie.net/espokemon/images/8/83/Mewtwo_NB.gif/revision/latest/scale-to-width-down/100?cb=20101105165130"), new Image("https://cdn-icons-png.flaticon.com/512/32/32353.png"), new Image("https://images.wikidexcdn.net/mwuploads/wikidex/9/9a/latest/20101210174929/Mewtwo_espalda_G5.gif"));
-	Pokemon p6 = new Pokemon(6, "Butterfree", 160f, 160f, "LV.54", new Image("https://static.wikia.nocookie.net/espokemon/images/e/ed/Butterfree_NB_hembra.gif/revision/latest/scale-to-width-down/63?cb=20110106222132"), new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"), new Image("https://images.wikidexcdn.net/mwuploads/wikidex/2/28/latest/20110107052640/Butterfree_espalda_G5_hembra.gif"));
+	Pokemon p1 = new Pokemon(1, "Jolteon", 204f, 204f, "LV.65", new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Jolteon.gif"), new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"),new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Jolteon_espalda.gif"));
+	Pokemon p2 = new Pokemon(2, "Charizard", 148f, 148f, "LV.45", new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\charizard.gif"), new Image("https://cdn-icons-png.flaticon.com/512/32/32353.png"),new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Vaporeon_espalda.gif"));
+	Pokemon p3 = new Pokemon(3, "Vapereon", 234f, 234f, "LV.54",new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Vaporeon.gif"), new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"),new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Vaporeon_espalda.gif"));
+	Pokemon p5 = new Pokemon(4, "Pikachu", 222f, 222f, "LV.65",  new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Pikachu.gif"), new Image("https://cdn-icons-png.flaticon.com/512/32/32353.png"),  new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Pikachu_espalda.gif"));
+	Pokemon p4 = new Pokemon(5, "Mewtwo", 298f, 298f, "LV.75", new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Mewtwo.gif"), new Image("https://cdn-icons-png.flaticon.com/512/32/32353.png"), new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Mewtwo_esplada.gif"));
+	Pokemon p6 = new Pokemon(6, "Butterfree", 160f, 160f, "LV.54", new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Butterfree.gif"), new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"), new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Butterfree_espalda.gif"));
 
 	//POKEMON 1
 	@FXML
@@ -171,12 +172,18 @@ public class Ventana1Controller {
 		l16Nombre6.setText(p6.nombre);
 		l17Nivel6.setText("" + p6.nivel);
 		l18Vida6.setText("" + p6.vida_actual);
-		img1.setImage(p1.foto);
-		img2.setImage(p2.foto);
-		img3.setImage(p3.foto);
-		img4.setImage(p4.foto);
-		img5.setImage(p5.foto);
-		img6.setImage(p6.foto);
+		Image imagen1=new Image(p1.foto.toURI().toString());
+		img1.setImage(imagen1);
+		Image imagen2=new Image(p2.foto.toURI().toString());
+		img2.setImage(imagen2);
+		Image imagen3=new Image(p3.foto.toURI().toString());
+		img3.setImage(imagen3);
+		Image imagen4=new Image(p4.foto.toURI().toString());
+		img4.setImage(imagen4);
+		Image imagen5=new Image(p5.foto.toURI().toString());
+		img5.setImage(imagen5);
+		Image imagen6=new Image(p6.foto.toURI().toString());
+		img6.setImage(imagen6);
 		progress1.setProgress(p1.vida_actual / p1.vida);
 		progress2.setProgress(p2.vida_actual / p2.vida);
 		progress3.setProgress(p3.vida_actual / p3.vida);

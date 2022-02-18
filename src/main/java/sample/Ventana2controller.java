@@ -7,6 +7,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Optional;
 
@@ -14,10 +15,10 @@ import java.util.Optional;
 public class Ventana2controller {
 
     ArrayList<Pokemon_enemigo> Pokemon_enemigos = new ArrayList();
-    Pokemon_enemigo p_e1 = new Pokemon_enemigo("Arbok",250f,250f,"NV.70",new Image("https://static.wikia.nocookie.net/espokemon/images/b/b8/Arbok_NB_variocolor.gif/revision/latest/scale-to-width-down/84?cb=20110426043824"),new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"));
-    Pokemon_enemigo p_e2 = new Pokemon_enemigo("Palkia",650f,650f,"NV.120",new Image( "https://static.wikia.nocookie.net/espokemon/images/e/ef/Palkia_NB_variocolor.gif/revision/latest/scale-to-width-down/87?cb=20130427180202"), new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"));
-    Pokemon_enemigo p_e3 = new Pokemon_enemigo("Onix",200f,200f,"NV.55",new Image("https://static.wikia.nocookie.net/espokemon/images/d/d3/Onix_NB.gif/revision/latest/scale-to-width-down/81?cb=20101031234953"),new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"));
-    Pokemon_enemigo p_e4 = new Pokemon_enemigo("Gyarados",200f,200f,"NV.55",new Image("https://static.wikia.nocookie.net/espokemon/images/1/11/Gyarados_NB_variocolor.gif/revision/latest/scale-to-width-down/126?cb=20110327230349"),new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"));
+    Pokemon_enemigo p_e1 = new Pokemon_enemigo("Arbok",250f,250f,"NV.70",new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Arbok.gif"),new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"));
+    Pokemon_enemigo p_e2 = new Pokemon_enemigo("Palkia",650f,650f,"NV.120",new File( ".\\src\\main\\java\\sample\\ImagenesPokemon\\Palkia.gif"), new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"));
+    Pokemon_enemigo p_e3 = new Pokemon_enemigo("Onix",200f,200f,"NV.55",new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Onix.gif"),new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"));
+    Pokemon_enemigo p_e4 = new Pokemon_enemigo("Gyarados",200f,200f,"NV.55",new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Gyarados.gif"),new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"));
 
 
     @FXML
@@ -69,12 +70,14 @@ public class Ventana2controller {
         Pokemon_enemigos.add(p_e3);
         Pokemon_enemigos.add(p_e4);
         oponente = Pokemon_enemigos.get((int) (Math.random() * Pokemon_enemigos.size()));
-        img_espaldas.setImage(Pokemon_amigo.foto_detras);
         name_pokemon.setText(Pokemon_amigo.nombre);
         nivel_pokemon.setText(Pokemon_amigo.nivel);
         img_sexo.setImage(Pokemon_amigo.sexo);
         pb_vida_actual.setProgress(Pokemon_amigo.vida_actual/Pokemon_amigo.vida);
-        img_enemigo.setImage(oponente.foto);
+        Image imagen1=new Image(Pokemon_amigo.foto_detras.toURI().toString());
+        img_espaldas.setImage(imagen1);
+        Image imagen2=new Image(oponente.foto.toURI().toString());
+        img_enemigo.setImage(imagen2);
         name_enemigo_pokemon.setText(oponente.nombre);
         nivel_enemigo_pokemon.setText(oponente.nivel);
         vida_actual_enemigo.setProgress(oponente.vida_actual/oponente.vida);
@@ -276,7 +279,7 @@ public class Ventana2controller {
         alert.setHeaderText(null);
         alert.setContentText(pokemon_amigo.nombre+"\n ha perdido \n Elegir otro pokemon pulse SI \n Salir del programa NO");
         alert.setTitle("Choose an option");
-        alert.setGraphic(new ImageView(pokemon_amigo.foto));
+        alert.setGraphic(new ImageView(pokemon_amigo.foto.toURI().toString()));
         alert.getDialogPane().getButtonTypes().addAll(ButtonType.YES,ButtonType.NO);
         return alert;
 
@@ -286,7 +289,7 @@ public class Ventana2controller {
         alert.setHeaderText(null);
         alert.setContentText("tu pokemon ha derrotado a: \n"+oponentes.nombre+" \n Elegir otro pokemon pulse SI \n Salir del programa NO");
         alert.setTitle("Choose an option");
-        alert.setGraphic(new ImageView(oponentes.foto));
+        alert.setGraphic(new ImageView(oponentes.foto.toURI().toString()));
         alert.getDialogPane().getButtonTypes().addAll(ButtonType.YES,ButtonType.NO);
         return alert;
 
