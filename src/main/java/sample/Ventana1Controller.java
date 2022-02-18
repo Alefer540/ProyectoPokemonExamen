@@ -35,7 +35,7 @@ public class Ventana1Controller {
 
 	ArrayList<Pokemon> ArraylistPokemon = new ArrayList();
 	Pokemon p1 = new Pokemon(1, "Jolteon", 204f, 204f, "LV.65", new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Jolteon.gif"), new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"),new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Jolteon_espalda.gif"));
-	Pokemon p2 = new Pokemon(2, "Charizard", 148f, 148f, "LV.45", new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\charizard.gif"), new Image("https://cdn-icons-png.flaticon.com/512/32/32353.png"),new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Vaporeon_espalda.gif"));
+	Pokemon p2 = new Pokemon(2, "Charizard", 148f, 148f, "LV.45", new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\charizard.gif"), new Image("https://cdn-icons-png.flaticon.com/512/32/32353.png"),new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Charizard_espalda.gif"));
 	Pokemon p3 = new Pokemon(3, "Vapereon", 234f, 234f, "LV.54",new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Vaporeon.gif"), new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"),new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Vaporeon_espalda.gif"));
 	Pokemon p5 = new Pokemon(4, "Pikachu", 222f, 222f, "LV.65",  new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Pikachu.gif"), new Image("https://cdn-icons-png.flaticon.com/512/32/32353.png"),  new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Pikachu_espalda.gif"));
 	Pokemon p4 = new Pokemon(5, "Mewtwo", 298f, 298f, "LV.75", new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Mewtwo.gif"), new Image("https://cdn-icons-png.flaticon.com/512/32/32353.png"), new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Mewtwo_esplada.gif"));
