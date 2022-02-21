@@ -129,7 +129,7 @@ public class Ventana2controller {
         control_vida_enemigo();
         pb_vida_actual.setProgress((Pokemon_amigo.vida_actual-20)/Pokemon_amigo.vida);
         Pokemon_amigo.vida_actual -=20;
-        System.out.println("Daño pokemon amigo arriesgado -20");
+        System.out.println("Daño pokemon enemigo arriesgado -20");
         ventana1Controller.actualizar_pokemon(Pokemon_amigo);
         Ventana1Controller.danodado += 20;
         control_vida_amigo();
