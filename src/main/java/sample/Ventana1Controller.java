@@ -34,12 +34,12 @@ public class Ventana1Controller {
 
 
 	ArrayList<Pokemon> ArraylistPokemon = new ArrayList();
-	Pokemon p1 = new Pokemon(1, "Jolteon", 204f, 204f, "LV.65", new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Jolteon.gif"), new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"),new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Jolteon_espalda.gif"));
-	Pokemon p2 = new Pokemon(2, "Charizard", 148f, 148f, "LV.45", new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\charizard.gif"), new Image("https://cdn-icons-png.flaticon.com/512/32/32353.png"),new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Charizard_espalda.gif"));
-	Pokemon p3 = new Pokemon(3, "Vapereon", 234f, 234f, "LV.54",new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Vaporeon.gif"), new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"),new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Vaporeon_espalda.gif"));
-	Pokemon p5 = new Pokemon(4, "Pikachu", 222f, 222f, "LV.65",  new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Pikachu.gif"), new Image("https://cdn-icons-png.flaticon.com/512/32/32353.png"),  new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Pikachu_espalda.gif"));
-	Pokemon p4 = new Pokemon(5, "Mewtwo", 298f, 298f, "LV.75", new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Mewtwo.gif"), new Image("https://cdn-icons-png.flaticon.com/512/32/32353.png"), new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Mewtwo_esplada.gif"));
-	Pokemon p6 = new Pokemon(6, "Butterfree", 160f, 160f, "LV.54", new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Butterfree.gif"), new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"), new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Butterfree_espalda.gif"));
+	Pokemon p1 = new Pokemon(1, "Jolteon", 204f, 204f, "LV.65", new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Jolteon.gif"), new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\femenino.jpg"),new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Jolteon_espalda.gif"));
+	Pokemon p2 = new Pokemon(2, "Charizard", 148f, 148f, "LV.45", new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\charizard.gif"), new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\masculino.jpg"),new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Charizard_espalda.gif"));
+	Pokemon p3 = new Pokemon(3, "Vapereon", 234f, 234f, "LV.54",new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Vaporeon.gif"), new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\femenino.jpg"),new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Vaporeon_espalda.gif"));
+	Pokemon p5 = new Pokemon(4, "Pikachu", 222f, 222f, "LV.65",  new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Pikachu.gif"), new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\masculino.jpg"),  new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Pikachu_espalda.gif"));
+	Pokemon p4 = new Pokemon(5, "Mewtwo", 298f, 298f, "LV.75", new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Mewtwo.gif"), new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\masculino.jpg"), new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Mewtwo_espalda.gif"));
+	Pokemon p6 = new Pokemon(6, "Butterfree", 160f, 160f, "LV.54", new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Butterfree.gif"), new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\femenino.jpg"), new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Butterfree_espalda.gif"));
 
 	//POKEMON 1
 	@FXML
@@ -148,12 +148,6 @@ public class Ventana1Controller {
 		ArraylistPokemon.add(p4);
 		ArraylistPokemon.add(p5);
 		ArraylistPokemon.add(p6);
-		Sexo1.setImage(p1.sexo);
-		Sexo2.setImage(p2.sexo);
-		Sexo3.setImage(p3.sexo);
-		Sexo4.setImage(p4.sexo);
-		Sexo5.setImage(p5.sexo);
-		Sexo6.setImage(p6.sexo);
 		l1Nombre1.setText(p1.nombre);
 		l2Nivel1.setText("" + p1.nivel);
 		l3Vida1.setText("" + p1.vida_actual);
@@ -172,6 +166,18 @@ public class Ventana1Controller {
 		l16Nombre6.setText(p6.nombre);
 		l17Nivel6.setText("" + p6.nivel);
 		l18Vida6.setText("" + p6.vida_actual);
+		Image imagensexo1= new Image((p1.sexo.toURI().toString()));
+		Sexo1.setImage(imagensexo1);
+		Image imagensexo2= new Image((p2.sexo.toURI().toString()));
+		Sexo2.setImage(imagensexo2);
+		Image imagensexo3= new Image((p3.sexo.toURI().toString()));
+		Sexo3.setImage(imagensexo3);
+		Image imagensexo4= new Image((p4.sexo.toURI().toString()));
+		Sexo4.setImage(imagensexo4);
+		Image imagensexo5= new Image((p5.sexo.toURI().toString()));
+		Sexo5.setImage(imagensexo5);
+		Image imagensexo6= new Image((p6.sexo.toURI().toString()));
+		Sexo6.setImage(imagensexo6);
 		Image imagen1=new Image(p1.foto.toURI().toString());
 		img1.setImage(imagen1);
 		Image imagen2=new Image(p2.foto.toURI().toString());

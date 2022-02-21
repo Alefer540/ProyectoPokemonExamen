@@ -15,10 +15,10 @@ import java.util.Optional;
 public class Ventana2controller {
 
     ArrayList<Pokemon_enemigo> Pokemon_enemigos = new ArrayList();
-    Pokemon_enemigo p_e1 = new Pokemon_enemigo("Arbok",250f,250f,"NV.70",new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Arbok.gif"),new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"));
-    Pokemon_enemigo p_e2 = new Pokemon_enemigo("Palkia",650f,650f,"NV.120",new File( ".\\src\\main\\java\\sample\\ImagenesPokemon\\Palkia.gif"), new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"));
-    Pokemon_enemigo p_e3 = new Pokemon_enemigo("Onix",200f,200f,"NV.55",new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Onix.gif"),new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"));
-    Pokemon_enemigo p_e4 = new Pokemon_enemigo("Gyarados",200f,200f,"NV.55",new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Gyarados.gif"),new Image("https://cdn-icons-png.flaticon.com/512/90/90704.png"));
+    Pokemon_enemigo p_e1 = new Pokemon_enemigo("Arbok",250f,250f,"NV.70",new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Arbok.gif"),new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\masculino.jpg"));
+    Pokemon_enemigo p_e2 = new Pokemon_enemigo("Palkia",650f,650f,"NV.120",new File( ".\\src\\main\\java\\sample\\ImagenesPokemon\\Palkia.gif"), new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\masculino.jpg"));
+    Pokemon_enemigo p_e3 = new Pokemon_enemigo("Onix",200f,200f,"NV.55",new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Onix.gif"),new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\femenino.jpg"));
+    Pokemon_enemigo p_e4 = new Pokemon_enemigo("Gyarados",200f,200f,"NV.55",new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Gyarados.gif"),new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\femenino.jpg"));
 
 
     @FXML
@@ -72,7 +72,8 @@ public class Ventana2controller {
         oponente = Pokemon_enemigos.get((int) (Math.random() * Pokemon_enemigos.size()));
         name_pokemon.setText(Pokemon_amigo.nombre);
         nivel_pokemon.setText(Pokemon_amigo.nivel);
-        img_sexo.setImage(Pokemon_amigo.sexo);
+        Image imagen3=new Image(Pokemon_amigo.sexo.toURI().toString());
+        img_sexo.setImage(imagen3);
         pb_vida_actual.setProgress(Pokemon_amigo.vida_actual/Pokemon_amigo.vida);
         Image imagen1=new Image(Pokemon_amigo.foto_detras.toURI().toString());
         img_espaldas.setImage(imagen1);
@@ -81,7 +82,8 @@ public class Ventana2controller {
         name_enemigo_pokemon.setText(oponente.nombre);
         nivel_enemigo_pokemon.setText(oponente.nivel);
         vida_actual_enemigo.setProgress(oponente.vida_actual/oponente.vida);
-        img_sexo_enemigo.setImage(oponente.sexo);
+        Image imagen4=new Image(oponente.sexo.toURI().toString());
+        img_sexo_enemigo.setImage(imagen4);
         ataque_arriesgado.setDisable(true);
         ataque_muy_arriesgado.setDisable(true);
         cancelar_ataque.setDisable(true);

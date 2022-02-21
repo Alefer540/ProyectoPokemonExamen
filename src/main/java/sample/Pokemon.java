@@ -10,11 +10,11 @@ public class Pokemon{
     Float vida;
     Float vida_actual;
     String nivel;
-    Image sexo;
+    File sexo;
     File foto;
     File foto_detras;
 
-    Pokemon(int index, String nombre, Float vida, Float vida_actual, String nivel, File foto, Image sexo, File foto_detras){
+    Pokemon(int index, String nombre, Float vida, Float vida_actual, String nivel, File foto, File sexo, File foto_detras){
         this.index = index;
         this.nombre=nombre;
         this.vida=vida;

@@ -9,11 +9,11 @@ class Pokemon_enemigo {
     Float vida;
     Float vida_actual;
     String nivel;
-    Image sexo;
+    File sexo;
     File foto;
 
 
-    Pokemon_enemigo(String nombre, Float vida, Float vida_actual, String nivel, File foto, Image sexo) {
+    Pokemon_enemigo(String nombre, Float vida, Float vida_actual, String nivel, File foto, File sexo) {
         this.nombre = nombre;
         this.vida = vida;
         this.vida_actual = vida_actual;
