@@ -1,13 +1,18 @@
 package sample;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Optional;
 
@@ -19,6 +24,7 @@ public class Ventana2controller {
     Pokemon_enemigo p_e2 = new Pokemon_enemigo("Palkia",650f,650f,"NV.120",new File( ".\\src\\main\\java\\sample\\ImagenesPokemon\\Palkia.gif"), new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\masculino.jpg"));
     Pokemon_enemigo p_e3 = new Pokemon_enemigo("Onix",200f,200f,"NV.55",new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Onix.gif"),new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\femenino.jpg"));
     Pokemon_enemigo p_e4 = new Pokemon_enemigo("Gyarados",200f,200f,"NV.55",new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\Gyarados.gif"),new File(".\\src\\main\\java\\sample\\ImagenesPokemon\\femenino.jpg"));
+
 
 
     @FXML
@@ -57,10 +63,13 @@ public class Ventana2controller {
             Label ps;
     @FXML
     Label ps1;
+    @FXML
+    ImageView fondo_Batalla;
 
 
     Pokemon_enemigo oponente;
     Pokemon Pokemon_amigo;
+  
 
     public void funcioninicio(Pokemon Pokemon_amigo) {
         this.Pokemon_amigo = Pokemon_amigo;
@@ -202,6 +211,35 @@ public class Ventana2controller {
         luchar.setStyle("-fx-opacity:1;-fx-background-color: #F8A9B1; -fx-border-color: #D43E41; -fx-border-radius: 20; -fx-border-width: 5; -fx-background-radius: 20;");
         curarse.setStyle("-fx-opacity:1;-fx-background-radius: 20; -fx-border-width: 5; -fx-border-radius: 20; -fx-background-color: #2891C9; -fx-border-color: #3A668A;");
     }
+    Stage stage4;
+    @FXML
+    public void mochila()
+    {System.out.println("Boton pulsado pasamos al siguiente escenario");
+        try {
+
+            stage4 = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/ventana4.fxml"));
+
+            BorderPane root = loader.load();
+            Scene scene = new Scene(root, 400, 600);
+
+            stage4.setScene(scene);
+            stage4.show();
+            stage4.setResizable(false);
+
+            Ventana4controller v = loader.getController();
+            v.infopokemon(Pokemon_amigo);
+            v.enviarController2(this);
+
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
 
 
     private void aparecer_botones_ataques(){
@@ -227,7 +265,9 @@ public class Ventana2controller {
     private void control_vida_amigo(){
         if (Pokemon_amigo.vida_actual <= 0){
             Pokemon_amigo.vida_actual = Float.valueOf(0);
-            showAlert(alert(Pokemon_amigo));
+            showAlert1(alert1(Pokemon_amigo));
+
+
 
         }
     }
@@ -235,6 +275,16 @@ public class Ventana2controller {
         if (oponente.vida_actual <= 0) {
             oponente.vida_actual = Float.valueOf(0);
             showAlert2(alert_enemigo(oponente));
+        }
+    }
+    private void showAlert1(Alert alert1) {
+        Optional<ButtonType> decission = alert1.showAndWait();
+        if (decission.get() == ButtonType.NO) {
+            ventana1Controller.actualizar_pokemon(Pokemon_amigo);
+            ventana1Controller.stage2.close();
+        } else {
+           mochila();
+
         }
     }
     private void showAlert(Alert alert) {
@@ -275,6 +325,15 @@ public class Ventana2controller {
             Ventana1Controller.cont_p6++;
         }
     }
+    public Alert alert1(Pokemon pokemon_amigo){
+        Alert alert=new Alert(Alert.AlertType.NONE);
+        alert.setHeaderText(null);
+        alert.setContentText(pokemon_amigo.nombre+"\n ha perdido \n QUIERES ABRIR LA MOCHILA? SI \n VOLVER AL MENU NO");
+        alert.setTitle("Choose an option");
+        alert.setGraphic(new ImageView(pokemon_amigo.foto.toURI().toString()));
+        alert.getDialogPane().getButtonTypes().addAll(ButtonType.YES,ButtonType.NO);
+        return alert;
+    }
 
     public Alert alert(Pokemon pokemon_amigo){
         Alert alert=new Alert(Alert.AlertType.NONE);
@@ -294,6 +353,12 @@ public class Ventana2controller {
         alert.setGraphic(new ImageView(oponentes.foto.toURI().toString()));
         alert.getDialogPane().getButtonTypes().addAll(ButtonType.YES,ButtonType.NO);
         return alert;
+
+    }
+    public void actualizar_pokemon(Pokemon pokemon_amigo) {
+        pb_vida_actual.setProgress(Pokemon_amigo.vida_actual/Pokemon_amigo.vida);
+        ventana1Controller.actualizar_pokemon(Pokemon_amigo);
+
 
     }
 

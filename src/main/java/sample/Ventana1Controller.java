@@ -291,6 +291,7 @@ public class Ventana1Controller {
 
 			stage2.setScene(scene);
 			stage2.show();
+			stage2.setResizable(false);
 
 			Ventana2controller v = loader.getController();
 			v.funcioninicio(pokemon_amigo);
@@ -315,6 +316,7 @@ public class Ventana1Controller {
 
 			stage3.setScene(scene);
 			stage3.show();
+			stage3.setResizable(false);
 
 			Ventana3controller v = loader.getController();
 			v.datosPiechart(danodado,danorecibido);
